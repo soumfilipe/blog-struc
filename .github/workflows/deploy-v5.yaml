@@ -56,7 +56,7 @@ jobs:
         run: npx prettier . --write
 
       - name: Build Quartz
-        run: npx quartz build -d public -v
+        run: npx quartz build -v
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
