@@ -6,6 +6,7 @@ descrição: "Mágica digital, custo real O tema da inteligência artificial (IA
 categories: [Sem categoria]
 url: https://filipecosta.eti.br/blog/2024/02/04/a-sede-da-inteligencia-artificial-a-conta-ninguem-ve/
 ---
+
 **Mágica digital, custo real**
 
 O tema da inteligência artificial (IA) transbordou. Ela nos deslumbra com sua capacidade de criar imagens, textos e soluções que parecem mágicas. A promessa é de um futuro revolucionário. Mas toda mágica tem um truque, e todo processo digital tem uma base física, material.

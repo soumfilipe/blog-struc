@@ -6,6 +6,7 @@ descrição: "O bombardeio de propaganda que a burguesia despeja diariamente sob
 categories: [sociedade, tecnologia]
 url: https://filipecosta.eti.br/blog/2026/06/01/a-mecanizacao-da-inteligencia-humana/
 ---
+
 O bombardeio de propaganda que a burguesia despeja diariamente sobre as nossas cabeças pinta a Inteligência Artificial (IA) como uma força mágica, neutra e inevitável. Os ideólogos do capital nos prometem um futuro sem esforço, onde as máquinas libertarão a humanidade do fardo do trabalho. Trata-se da mais velha mentira deslavada. Sob o capitalismo, o avanço tecnológico nunca visou à emancipação da classe trabalhadora, mas sim ao aumento brutal da taxa de exploração, à concentração de riqueza e à destruição de direitos históricos. A “tecnologia”, não está nas nuvens, possui uma base material muito concreta. A IA nada mais é do que um novo e poderosíssimo meio de produção, concentrado de forma quase absoluta nas mãos de uma parcela ínfima da burguesia. Empresas como Microsoft, Google, Nvidia e Amazon — as Big Techs — detêm o monopólio material dessas tecnologias, e utilizam elas como correias de transmissão da sua ideologia e como ferramentas para sugar até a última gota de suor do trabalhador.
 
 ## Fim do Artesão Intelectual

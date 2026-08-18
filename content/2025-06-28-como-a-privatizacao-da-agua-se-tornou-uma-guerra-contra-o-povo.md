@@ -6,6 +6,7 @@ descrição: "Há mais de 60 anos, a água que brotava de uma mina no bairro do 
 categories: [Sem categoria]
 url: https://filipecosta.eti.br/blog/2025/06/28/como-a-privatizacao-da-agua-se-tornou-uma-guerra-contra-o-povo/
 ---
+
 Há mais de 60 anos, a água que brotava de uma mina no bairro do Meudon, em Teresópolis, era sinônimo de vida e comunidade. Era uma solução sustentável, distribuição e armazenamento comunitárias construídas e mantidas pelo povo, o que garantia um direito fundamental a dezenas de lares. Nas últimas semanas, esse cenário de autonomia foi transformado em um campo de guerra. No lugar da coleta coletiva, chegaram homens com fuzis e a ganância da Águas da Imperatriz, a representante local do grupo Águas do Brasil, que assumiu os serviços após a privatização da CEDAE.
 
 A ordem da empresa foi clara: o que era um direito agora tem preço. E quem não puder pagar, que fique com sede. E as promessas de taxas reduzidas e serviço de qualidade se revelaram o que sempre são: uma farsa neoliberal para entregar o patrimônio do povo ao capital.

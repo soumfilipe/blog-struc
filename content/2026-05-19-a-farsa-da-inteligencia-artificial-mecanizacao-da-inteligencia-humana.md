@@ -6,6 +6,7 @@ descrição: "O bombardeio de propaganda que a burguesia despeja diariamente sob
 categories: [estudos, sociedade, tecnologia]
 url: https://filipecosta.eti.br/blog/2026/05/19/a-farsa-da-inteligencia-artificial-mecanizacao-da-inteligencia-humana/
 ---
+
 O bombardeio de propaganda que a burguesia despeja diariamente sobre as nossas cabeças pinta a Inteligência Artificial (IA) como uma força mágica, neutra e inevitável. Os ideólogos do capital nos prometem um futuro sem esforço, onde as máquinas libertarão a humanidade do fardo do trabalho. Trata-se da mais velha mentira deslavada. Sob o capitalismo, o avanço tecnológico nunca visou à emancipação da classe trabalhadora, mas sim ao aumento brutal da taxa de exploração, à concentração de riqueza e à destruição de direitos históricos.
 
 A “tecnologia”, não está nas nuvens, possui uma base material muito concreta. A IA nada mais é do que um novo e poderosíssimo meio de produção, concentrado de forma quase absoluta nas mãos de uma parcela ínfima da burguesia. Empresas como Microsoft, Google, Nvidia e Amazon — as Big Techs — detêm o monopólio material dessas tecnologias, e utilizam elas como correias de transmissão da sua ideologia e como ferramentas para sugar até a última gota de suor do trabalhador.
@@ -54,14 +55,14 @@ A verdadeira soberania do nosso país e a libertação do nosso povo não virão
 
 **Fontes**:
 
-Duque, Daniel. “Inteligência artificial generativa e mercado de trabalho no Brasil: evidências iniciais sobre ocupação e renda.” *FGV Ibre*, 27 04 2026, [https://blogdoibre.fgv.br/sites/blogdoibre.fgv.br/files/u139/inteligencia_artificial_generativa_e_mercado_de_trabalho_no_brasil_0.pdf](https://blogdoibre.fgv.br/sites/blogdoibre.fgv.br/files/u139/inteligencia_artificial_generativa_e_mercado_de_trabalho_no_brasil_0.pdf). Acesso em 09 05 2026.
+Duque, Daniel. “Inteligência artificial generativa e mercado de trabalho no Brasil: evidências iniciais sobre ocupação e renda.” _FGV Ibre_, 27 04 2026, [https://blogdoibre.fgv.br/sites/blogdoibre.fgv.br/files/u139/inteligencia_artificial_generativa_e_mercado_de_trabalho_no_brasil_0.pdf](https://blogdoibre.fgv.br/sites/blogdoibre.fgv.br/files/u139/inteligencia_artificial_generativa_e_mercado_de_trabalho_no_brasil_0.pdf). Acesso em 09 05 2026.
 
-Pessanha, Gabriel Rodrigo Gomes. “Viés e Discriminação em Processos de Recrutamento Automatizados: Uma Revisão Sistemática da Literatura sobre o Uso de Inteligência Artificial.” *SEMEAD*, 2025, [https://login.semead.com.br/28semead/anais/resumo.php?cod_trabalho=1650](https://login.semead.com.br/28semead/anais/resumo.php?cod_trabalho=1650). Acesso em 02 05 2026.
+Pessanha, Gabriel Rodrigo Gomes. “Viés e Discriminação em Processos de Recrutamento Automatizados: Uma Revisão Sistemática da Literatura sobre o Uso de Inteligência Artificial.” _SEMEAD_, 2025, [https://login.semead.com.br/28semead/anais/resumo.php?cod_trabalho=1650](https://login.semead.com.br/28semead/anais/resumo.php?cod_trabalho=1650). Acesso em 02 05 2026.
 
-PressWorks. “Digital se consolida e já está presente em 72% dos processos seletivos no Brasil.” *Valor Econômico*, 13 03 2026, [https://valor.globo.com/patrocinado/pressworks/noticia/2026/03/13/digital-se-consolida-e-ja-esta-presente-em-72-dos-processos-seletivos-no-brasil-1.ghtml](https://valor.globo.com/patrocinado/pressworks/noticia/2026/03/13/digital-se-consolida-e-ja-esta-presente-em-72-dos-processos-seletivos-no-brasil-1.ghtml). Acesso em 19 05 2026.
+PressWorks. “Digital se consolida e já está presente em 72% dos processos seletivos no Brasil.” _Valor Econômico_, 13 03 2026, [https://valor.globo.com/patrocinado/pressworks/noticia/2026/03/13/digital-se-consolida-e-ja-esta-presente-em-72-dos-processos-seletivos-no-brasil-1.ghtml](https://valor.globo.com/patrocinado/pressworks/noticia/2026/03/13/digital-se-consolida-e-ja-esta-presente-em-72-dos-processos-seletivos-no-brasil-1.ghtml). Acesso em 19 05 2026.
 
-Santos, Rodrigo Coimbra, e Graminho, Vivian Maria Caxambu. “Discriminação algorítmica nas relações de trabalho e princípios da Lei Geral De Proteção De Dados.” *Periódicos UFSC*, 26 09 2024, [https://periodicos.ufsc.br/index.php/sequencia/article/view/96294](https://periodicos.ufsc.br/index.php/sequencia/article/view/96294). Acesso em 08 05 2026.
+Santos, Rodrigo Coimbra, e Graminho, Vivian Maria Caxambu. “Discriminação algorítmica nas relações de trabalho e princípios da Lei Geral De Proteção De Dados.” _Periódicos UFSC_, 26 09 2024, [https://periodicos.ufsc.br/index.php/sequencia/article/view/96294](https://periodicos.ufsc.br/index.php/sequencia/article/view/96294). Acesso em 08 05 2026.
 
-Silva, Humberta Karinne da Conceição Santos. “Artificial intelligence in the hiring process: uses and consequences.” *Jornal da USP*, 03 10 2025, [https://teses.usp.br/teses/disponiveis/12/12139/tde-03102025-113052/pt-br.html](https://teses.usp.br/teses/disponiveis/12/12139/tde-03102025-113052/pt-br.html). Acesso em 03 05 2026.
+Silva, Humberta Karinne da Conceição Santos. “Artificial intelligence in the hiring process: uses and consequences.” _Jornal da USP_, 03 10 2025, [https://teses.usp.br/teses/disponiveis/12/12139/tde-03102025-113052/pt-br.html](https://teses.usp.br/teses/disponiveis/12/12139/tde-03102025-113052/pt-br.html). Acesso em 03 05 2026.
 
-Workday. “Beyond Productivity: Measuring the Real Value of AI.” *Workday*, 2026, [https://mb.cision.com/Public/23916/4309334/9fe00b14fe0000f0.pdf](https://mb.cision.com/Public/23916/4309334/9fe00b14fe0000f0.pdf). Acesso em 05 05 2026.
+Workday. “Beyond Productivity: Measuring the Real Value of AI.” _Workday_, 2026, [https://mb.cision.com/Public/23916/4309334/9fe00b14fe0000f0.pdf](https://mb.cision.com/Public/23916/4309334/9fe00b14fe0000f0.pdf). Acesso em 05 05 2026.

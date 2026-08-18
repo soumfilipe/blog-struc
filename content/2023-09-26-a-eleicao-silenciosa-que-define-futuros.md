@@ -6,6 +6,7 @@ descrição: "Em poucos dias, acontece uma eleição crucial em todo o Brasil e,
 categories: [Sem categoria, conselho-tutelar, eca, política]
 url: https://filipecosta.eti.br/blog/2023/09/26/a-eleicao-silenciosa-que-define-futuros/
 ---
+
 Em poucos dias, acontece uma eleição crucial em todo o Brasil e, confesso, até pouco tempo atrás eu nunca tinha ouvido falar dela. Falo da eleição para o Conselho Tutelar. Essa minha ignorância, que suspeito ser compartilhada por muitos, é perigosa. Ela abre espaço para que a linha de frente da defesa de crianças e adolescentes seja ocupada por quem menos deveria estar lá.
 
 Fiquei interessado, comecei a pesquisar e entendi que essa não é uma votação administrativa qualquer. É um campo de batalha silencioso e decisivo.

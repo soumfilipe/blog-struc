@@ -6,6 +6,7 @@ descrição: "Em 1994, quando a internet ainda engatinhava, uma tecnologia simpl
 categories: [Sem categoria]
 url: https://filipecosta.eti.br/blog/2023/11/22/cookies-a-breve-historia-de-como-uma-ferramenta-util-se-tornou-uma-arma-de-vigilancia/
 ---
+
 Em 1994, quando a internet ainda engatinhava, uma tecnologia simples foi criada para resolver um problema irritante: a falta de memória dos sites. Eram os cookies. A ideia era ótima: pequenos arquivos de texto armazenados no seu navegador que permitiam que um site “lembrasse” de você.
 
 Graças a eles, você não precisa digitar seu login e senha toda vez que acessa um site. É por causa deles que um site lembra que você prefere o modo escuro. Em sua essência, os cookies foram criados para agilizar, facilitar e melhorar nossa experiência online. Uma promessa de uma web mais inteligente e amigável. Mas essa promessa não durou muito.
