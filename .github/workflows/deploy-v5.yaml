@@ -52,6 +52,9 @@ jobs:
       - name: Check types and style
         run: npm run check
 
+      - name: Auto-format with Prettier
+        run: npx prettier . --write
+
       - name: Build Quartz
         run: npx quartz build -d public -v
 
