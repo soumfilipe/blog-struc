@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: pt-BR
-  baseUrl: soumfilipe.github.io/blog-struc
+  baseUrl: filipecosta.eti.br
   ignorePatterns:
     - private
     - templates
