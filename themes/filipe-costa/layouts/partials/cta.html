@@ -1,0 +1,15 @@
+{{- /* Faixa de chamada para contato. Texto em params.ctaBand; some se não houver. */ -}}
+{{- with site.Params.ctaBand }}
+<section class="section container">
+  <div class="cta-band">
+    <div>
+      <p class="label">{{ .label }}</p>
+      <h2 class="h2">{{ .title }}</h2>
+      {{- with .text }}
+      <p class="cta-band__text">{{ . }}</p>
+      {{- end }}
+    </div>
+    <a class="btn cta-band__btn" href="{{ .url | relURL }}">{{ .button }} {{ partial "icon.html" (dict "name" "seguir") }}</a>
+  </div>
+</section>
+{{- end }}

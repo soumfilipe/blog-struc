@@ -29,3 +29,106 @@ collections:
       - { label: Já divulgado, name: syndicated, widget: hidden, default: false }
       - { label: Endereços antigos, name: aliases, widget: hidden, required: false }
       - { label: Texto, name: body, widget: markdown }
+
+  - name: consultoria
+    label: Consultoria
+    label_singular: Serviço de consultoria
+    folder: content/consultoria
+    filter: { field: tipo, value: servico }
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [weight, title]
+    fields:
+      - { label: Tipo, name: tipo, widget: hidden, default: servico }
+      - { label: Título, name: title, widget: string }
+      - { label: Palavra em destaque (aparece em roxo no título), name: destaque, widget: string, required: false }
+      - { label: Resumo (uma frase), name: description, widget: text }
+      - { label: Ícone, name: icone, widget: select, required: false, options: [processo, design, rapido, perfil, codigo, terminal, agenda, busca, link, ok, ajustes, novo] }
+      - { label: Ordem na lista, name: weight, widget: number, default: 50 }
+      - { label: Situação, name: status, widget: select, required: false, options: [{ label: Disponível, value: disponivel }, { label: Em atualização, value: em-atualizacao }, { label: Em breve, value: em-breve }] }
+      - { label: Para quem, name: publico, widget: list, required: false }
+      - { label: Formato, name: formato, widget: string, required: false }
+      - { label: Carga horária, name: carga_horaria, widget: string, required: false }
+      - { label: Duração, name: duracao, widget: string, required: false }
+      - { label: O que a pessoa recebe, name: entregaveis, widget: list, required: false }
+      - { label: Rascunho, name: draft, widget: boolean, default: false }
+      - { label: Texto, name: body, widget: markdown }
+
+  - name: treinamentos
+    label: Treinamentos
+    label_singular: Treinamento
+    folder: content/treinamentos
+    filter: { field: tipo, value: curso }
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [weight, title]
+    fields:
+      - { label: Tipo, name: tipo, widget: hidden, default: curso }
+      - { label: Título, name: title, widget: string }
+      - { label: Palavra em destaque (aparece em roxo no título), name: destaque, widget: string, required: false }
+      - { label: Resumo (uma frase), name: description, widget: text }
+      - { label: Ícone, name: icone, widget: select, required: false, options: [processo, design, rapido, perfil, codigo, terminal, agenda, busca, link, ok, ajustes, novo] }
+      - { label: Ordem na lista, name: weight, widget: number, default: 50 }
+      - { label: Situação, name: status, widget: select, required: false, options: [{ label: Disponível, value: disponivel }, { label: Em atualização, value: em-atualizacao }, { label: Em breve, value: em-breve }] }
+      - { label: Para quem, name: publico, widget: list, required: false }
+      - { label: Formato, name: formato, widget: string, required: false }
+      - { label: Carga horária, name: carga_horaria, widget: string, required: false }
+      - { label: Duração, name: duracao, widget: string, required: false }
+      - { label: O que a pessoa recebe, name: entregaveis, widget: list, required: false }
+      - { label: Rascunho, name: draft, widget: boolean, default: false }
+      - { label: Texto, name: body, widget: markdown }
+
+  - name: paginas
+    label: Páginas
+    files:
+      - label: Sobre
+        name: sobre
+        file: content/sobre.md
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Palavra em destaque, name: destaque, widget: string, required: false }
+          - { label: Subtítulo, name: subtitulo, widget: text, required: false }
+          - { label: Descrição (buscadores e redes), name: description, widget: text, required: false }
+          - { label: Layout, name: layout, widget: hidden, default: sobre }
+          - { label: Texto, name: body, widget: markdown }
+      - label: Contato
+        name: contato
+        file: content/contato.md
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Palavra em destaque, name: destaque, widget: string, required: false }
+          - { label: Descrição, name: description, widget: text, required: false }
+          - { label: Layout, name: layout, widget: hidden, default: contato }
+          - { label: Texto ao lado do formulário, name: body, widget: markdown }
+
+  - name: dados
+    label: Dados
+    files:
+      - label: Trajetória
+        name: trajetoria
+        file: data/trajetoria.yaml
+        fields:
+          - label: Itens
+            name: items
+            widget: list
+            fields:
+              - { label: Período, name: periodo, widget: string }
+              - { label: Título, name: titulo, widget: string }
+              - { label: Local, name: local, widget: string, required: false }
+              - { label: Texto, name: texto, widget: text, required: false }
+      - label: Formações e projetos
+        name: experiencias
+        file: data/experiencias.yaml
+        fields:
+          - label: Itens
+            name: items
+            widget: list
+            fields:
+              - { label: Ano, name: ano, widget: number }
+              - { label: Organização, name: organizacao, widget: string }
+              - { label: O que foi feito, name: atividade, widget: string }
+              - { label: Link, name: url, widget: string, required: false }

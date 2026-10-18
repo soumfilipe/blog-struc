@@ -1,5 +1,8 @@
 {{ define "main" }}
+{{- $home := site.Params.home }}
 {{- $hero := site.Params.hero }}
+
+{{- /* 1. Hero: posicionamento */}}
 <section class="hero container">
   <p class="label label--accent">{{ $hero.label | default site.Params.tagline }}</p>
   <h1 class="h-display">
@@ -11,17 +14,77 @@
   {{- with $hero.lead }}
   <p class="lead">{{ . }}</p>
   {{- end }}
-  {{- with .Content }}
-  <div class="prose" style="margin-top: var(--space-8)">{{ . }}</div>
+  {{- if or $hero.primary $hero.secondary }}
+  <div class="hero__actions">
+    {{- with $hero.primary }}
+    <a class="btn btn--primary" href="{{ .url | relURL }}">{{ .label }}</a>
+    {{- end }}
+    {{- with $hero.secondary }}
+    <a class="btn" href="{{ .url | relURL }}">{{ .label }} {{ partial "icon.html" (dict "name" "seguir") }}</a>
+    {{- end }}
+  </div>
   {{- end }}
 </section>
 
-{{- /* Posts: seções em params.mainSections; sem seções, todas as páginas */}}
+{{- /* 2. Portas: consultoria, treinamentos, textos */}}
+{{- with $home.portas }}
+<section class="section container" aria-labelledby="portas">
+  <div class="section__head">
+    <h2 id="portas" class="h2">{{ $home.portasTitulo | default "Como posso ajudar" }}</h2>
+  </div>
+  <div class="card-grid">
+    {{- range $i, $porta := . }}
+    {{- with site.GetPage $porta.pagina }}
+    <article class="card door{{ if $porta.destaque }} card--accent{{ end }}">
+      {{ with $porta.icone }}{{ partial "icon.html" (dict "name" . "class" "icon--32") }}{{ end }}
+      <span class="label">{{ printf "%02d" (add $i 1) }} / {{ $porta.rotulo | default (lower .Title) }}</span>
+      <h3 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{- with partial "description.html" . }}
+      <p class="card__summary">{{ . }}</p>
+      {{- end }}
+    </article>
+    {{- end }}
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- /* 3. Para quem */}}
+{{- with $home.publicos }}
+<section class="section container" aria-labelledby="publicos">
+  <div class="section__head">
+    <h2 id="publicos" class="h2">{{ $home.publicosTitulo | default "Para quem" }}</h2>
+  </div>
+  <ul class="audience">
+    {{- range . }}
+    <li class="audience__item">
+      <span class="label label--accent">{{ .nome }}</span>
+      <p>{{ .texto }}</p>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- /* 4. Onde já atuei (data/experiencias.yaml) */}}
+{{- with site.Data.experiencias.items }}
+<section class="section container" aria-labelledby="experiencias">
+  <div class="section__head">
+    <h2 id="experiencias" class="h2">Onde já <span class="hl">atuei</span></h2>
+    {{- with site.GetPage "/sobre" }}
+    <a class="btn" href="{{ .RelPermalink }}">trajetória completa {{ partial "icon.html" (dict "name" "seguir") }}</a>
+    {{- end }}
+  </div>
+  {{ partial "experiencias.html" . }}
+</section>
+{{- end }}
+
+{{- /* 5. Últimos textos */}}
 {{- $pages := site.RegularPages }}
 {{- with site.Params.mainSections }}
   {{- $pages = where site.RegularPages "Section" "in" . }}
 {{- end }}
-{{- $limit := site.Params.homePosts | default 7 }}
+{{- $limit := site.Params.homePosts | default 3 }}
 {{- if $pages }}
 <section class="section container" aria-labelledby="ultimos">
   <div class="section__head">
@@ -30,11 +93,14 @@
     <a class="btn" href="{{ . | relURL }}">ver todos {{ partial "icon.html" (dict "name" "seguir") }}</a>
     {{- end }}
   </div>
-  <div class="card-grid card-grid--featured">
-    {{- range $i, $p := first $limit $pages }}
-    {{ partial "post-card.html" (dict "page" $p "accent" (eq $i 0) "featured" (eq $i 0)) }}
+  <div class="card-grid">
+    {{- range first $limit $pages }}
+    {{ partial "post-card.html" (dict "page" .) }}
     {{- end }}
   </div>
 </section>
 {{- end }}
+
+{{- /* 6. Chamada final */}}
+{{ partial "cta.html" . }}
 {{ end }}

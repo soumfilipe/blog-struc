@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{- $section := .CurrentSection }}
+<article class="container">
+  <header class="post-head">
+    <div class="post-head__meta">
+      <a class="label label--accent" href="{{ $section.RelPermalink }}">{{ $section.Params.rotulo | default (lower $section.Title) }}</a>
+      {{ partial "offer-status.html" . }}
+    </div>
+    <h1 class="h1 post-head__title">{{ partial "title.html" . }}</h1>
+    {{- with partial "description.html" . }}
+    <p class="lead post-head__summary">{{ . }}</p>
+    {{- end }}
+  </header>
+
+  <div class="offer">
+    <div class="prose offer__body">
+      {{ .Content }}
+
+      {{- with .Params.entregaveis }}
+      <h2 id="o-que-voce-recebe">O que você recebe</h2>
+      <ul>
+        {{- range . }}<li>{{ . | markdownify }}</li>{{ end }}
+      </ul>
+      {{- end }}
+    </div>
+
+    <aside class="offer__facts" aria-label="Resumo">
+      <dl class="facts">
+        {{- with .Params.publico }}
+        <div><dt class="label">Para quem</dt><dd>{{ delimit . ", " " e " }}</dd></div>
+        {{- end }}
+        {{- with .Params.formato }}
+        <div><dt class="label">Formato</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        {{- with .Params.carga_horaria }}
+        <div><dt class="label">Carga horária</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        {{- with .Params.duracao }}
+        <div><dt class="label">Duração</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+      </dl>
+      {{- $assunto := .Title }}
+      {{- with site.GetPage "/contato" }}
+      <a class="btn btn--primary offer__cta" href="{{ .RelPermalink }}?interesse={{ $assunto | urlquery }}">
+        {{- if eq $.Params.status "em-breve" }}quero ser avisado{{ else }}vamos conversar{{ end -}}
+      </a>
+      {{- end }}
+    </aside>
+  </div>
+
+  {{- with where $section.Pages "Permalink" "!=" .Permalink }}
+  <nav class="section" aria-labelledby="outras">
+    <h2 id="outras" class="h3" style="margin-bottom: var(--space-6)">Veja também</h2>
+    <div class="card-grid">
+      {{- range first 3 .ByWeight }}
+      <article class="card">
+        <div class="offer-card__top">
+          {{ with .Params.icone }}{{ partial "icon.html" (dict "name" . "class" "icon--accent") }}{{ end }}
+          {{ partial "offer-status.html" . }}
+        </div>
+        <h3 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      </article>
+      {{- end }}
+    </div>
+  </nav>
+  {{- end }}
+</article>
+{{ end }}

@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{- /* Página "Sobre": apresentação, trajetória (data/trajetoria.yaml), experiências e texto livre */}}
+<article class="container">
+  <header class="post-head">
+    <p class="label label--accent">{{ .Params.rotulo | default "sobre" }}</p>
+    <h1 class="h1 post-head__title">{{ partial "title.html" . }}</h1>
+    {{- with .Params.subtitulo }}
+    <p class="lead post-head__summary">{{ . }}</p>
+    {{- end }}
+  </header>
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  {{- with site.Data.trajetoria.items }}
+  <section class="section" aria-labelledby="trajetoria">
+    <h2 id="trajetoria" class="h2" style="margin-bottom: var(--space-8)">Trajetória</h2>
+    <ol class="timeline">
+      {{- range . }}
+      <li class="timeline__item">
+        <span class="label label--accent">{{ .periodo }}</span>
+        <h3 class="timeline__title">{{ .titulo }}</h3>
+        {{- with .local }}<p class="label">{{ . }}</p>{{ end }}
+        {{- with .texto }}<p class="timeline__text">{{ . }}</p>{{ end }}
+      </li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+
+  {{- with site.Data.experiencias.items }}
+  <section class="section" aria-labelledby="experiencias">
+    <h2 id="experiencias" class="h2" style="margin-bottom: var(--space-8)">Formações e projetos</h2>
+    {{ partial "experiencias.html" . }}
+  </section>
+  {{- end }}
+</article>
+
+{{ partial "cta.html" . }}
+{{ end }}

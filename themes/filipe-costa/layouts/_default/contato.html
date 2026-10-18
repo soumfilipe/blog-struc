@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{- /* Página de contato com formulário do Netlify Forms (precisa de "Form detection" ligado no Netlify) */}}
+<article class="container">
+  <header class="post-head">
+    <p class="label label--accent">{{ .Params.rotulo | default "contato" }}</p>
+    <h1 class="h1 post-head__title">{{ partial "title.html" . }}</h1>
+    {{- with partial "description.html" . }}
+    <p class="lead post-head__summary">{{ . }}</p>
+    {{- end }}
+  </header>
+
+  <div class="contact">
+    <form class="form" name="contato" method="POST" action="{{ .Params.obrigado | default "/contato/obrigado/" | relURL }}" data-netlify="true" netlify-honeypot="empresa-site">
+      <input type="hidden" name="form-name" value="contato">
+      <p class="visually-hidden" aria-hidden="true">
+        <label>Não preencha este campo: <input name="empresa-site" tabindex="-1" autocomplete="off"></label>
+      </p>
+
+      <div class="field">
+        <label class="label" for="nome">Nome</label>
+        <input class="field__input" id="nome" name="nome" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label class="label" for="email">E-mail</label>
+        <input class="field__input" id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label class="label" for="organizacao">Organização</label>
+        <input class="field__input" id="organizacao" name="organizacao" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label class="label" for="tipo">Tipo de organização</label>
+        <select class="field__input" id="tipo" name="tipo">
+          {{- range .Params.tipos | default (slice "Setor público" "ONG" "Movimento social" "Cooperativa ou empreendimento solidário" "Empresa" "Pessoa física" "Outro") }}
+          <option>{{ . }}</option>
+          {{- end }}
+        </select>
+      </div>
+      <div class="field form__wide">
+        <label class="label" for="interesse">Assunto</label>
+        <input class="field__input" id="interesse" name="interesse" type="text" placeholder="Ex.: curso de design thinking para a equipe">
+      </div>
+      <div class="field form__wide">
+        <label class="label" for="mensagem">Mensagem</label>
+        <textarea class="field__input" id="mensagem" name="mensagem" rows="6" required></textarea>
+      </div>
+      <div class="form__wide form__consent">
+        <input id="aceite" name="aceite" type="checkbox" value="sim" required>
+        <label for="aceite">Concordo em ser contatado pelo e-mail informado. Os dados são usados só para responder a esta mensagem.</label>
+      </div>
+      <div class="form__wide">
+        <button class="btn btn--primary" type="submit">enviar {{ partial "icon.html" (dict "name" "seguir") }}</button>
+      </div>
+    </form>
+
+    {{- with .Content }}
+    <aside class="prose contact__aside">{{ . }}</aside>
+    {{- end }}
+  </div>
+</article>
+{{ end }}

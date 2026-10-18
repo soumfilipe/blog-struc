@@ -1,0 +1,5 @@
+{{- /* Selo de situação de uma oferta: disponivel, em-atualizacao ou em-breve */ -}}
+{{- $labels := dict "disponivel" "disponível" "em-atualizacao" "em atualização" "em-breve" "em breve" -}}
+{{- with .Params.status -}}
+<span class="badge badge--{{ . }}">{{ index $labels . | default . }}</span>
+{{- end -}}

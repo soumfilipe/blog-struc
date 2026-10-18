@@ -17,31 +17,87 @@ enableRobotsTXT = true
 
 [params]
   author = "Filipe Costa"
-  description = "Textos sobre tecnologia, sociedade e processos."
+  description = "Consultoria e formação em processos, design e agilidade para o setor público, ONGs e movimentos sociais."
   mainSections = ["posts"]
   archive = "/posts/"
+  homePosts = 3
 
-  # Placeholder: a copy final precisa ser validada (Guia de Identidade, seção 7)
+  # Rascunho de posicionamento: revisar antes de publicar
   [params.hero]
-    label = "programador · designer · processos"
-    title = "Faço o complexo parecer"
-    highlight = "simples"
+    label = "consultoria e formação · setor público, ONGs e movimentos"
+    title = "Processos a serviço de quem"
+    highlight = "trabalha"
     end = "."
-    lead = "Textos sobre tecnologia, sociedade e o trabalho por trás das ferramentas."
+    lead = "Consultoria e treinamentos em processos, design e agilidade para organizações que existem para servir às pessoas, e não ao lucro."
+    [params.hero.primary]
+      label = "vamos conversar"
+      url = "/contato/"
+    [params.hero.secondary]
+      label = "conheça os treinamentos"
+      url = "/treinamentos/"
 
-  # Botão em pílula do cabeçalho. Descomente quando houver página de contato.
-  # [params.cta]
-  #   label = "vamos conversar"
-  #   url = "/sobre/"
+  # Botão em pílula do cabeçalho
+  [params.cta]
+    label = "vamos conversar"
+    url = "/contato/"
 
+  # Seções da página inicial
+  [params.home]
+    portasTitulo = "Como posso ajudar"
+    publicosTitulo = "Para quem trabalho"
+    [[params.home.portas]]
+      pagina = "/consultoria"
+      icone = "processo"
+      destaque = true
+    [[params.home.portas]]
+      pagina = "/treinamentos"
+      icone = "agenda"
+    [[params.home.portas]]
+      pagina = "/posts"
+      rotulo = "textos"
+      icone = "terminal"
+    [[params.home.publicos]]
+      nome = "Setor público"
+      texto = "Equipes que precisam entregar mais com orçamento curto e regras rígidas, sem perder o cidadão de vista."
+    [[params.home.publicos]]
+      nome = "ONGs"
+      texto = "Organizações que cresceram e precisam de processo sem virar burocracia."
+    [[params.home.publicos]]
+      nome = "Movimentos sociais"
+      texto = "Coletivos que decidem juntos e precisam transformar decisão em ação organizada."
+    [[params.home.publicos]]
+      nome = "Economia solidária"
+      texto = "Cooperativas e empreendimentos em que a gestão é coletiva e o método precisa respeitar isso."
+
+  # Faixa de chamada no fim das páginas
+  [params.ctaBand]
+    label = "primeira conversa sem custo"
+    title = "Qual problema a sua equipe quer resolver?"
+    text = "Conte o contexto e eu digo, com franqueza, se e como posso ajudar."
+    button = "vamos conversar"
+    url = "/contato/"
+
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "link"
+    url = "https://www.linkedin.com/in/filipecostaeti"
+
+[[menus.main]]
+  name = "consultoria"
+  pageRef = "/consultoria"
+  weight = 10
+[[menus.main]]
+  name = "treinamentos"
+  pageRef = "/treinamentos"
+  weight = 20
 [[menus.main]]
   name = "textos"
   pageRef = "/posts"
-  weight = 10
+  weight = 30
 [[menus.main]]
-  name = "categorias"
-  pageRef = "/categories"
-  weight = 20
+  name = "sobre"
+  pageRef = "/sobre"
+  weight = 40
 
 # Necessário para o realce de sintaxe usar as cores da marca
 [markup]

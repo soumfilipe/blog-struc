@@ -8,6 +8,12 @@ Celular → `/admin` (Decap) → commit no GitHub → Netlify (Hugo) → Action 
 
 ```
 content/posts/          posts em Markdown (um arquivo por post)
+content/consultoria/    serviços de consultoria (um arquivo por serviço)
+content/treinamentos/   cursos (um arquivo por curso; status: disponivel, em-atualizacao ou em-breve)
+content/sobre.md        página Sobre ("no que acredito")
+content/contato.md      página de contato com formulário (Netlify Forms)
+data/trajetoria.yaml    linha do tempo da página Sobre
+data/experiencias.yaml  formações e projetos (página inicial e Sobre)
 static/admin/           painel do Decap CMS (config.yml)
 static/uploads/         imagens enviadas pelo painel
 themes/filipe-costa/    tema com a identidade visual (ver o README do tema)
@@ -32,6 +38,8 @@ Os posts publicados antes da migração já têm `syndicated: true`, para não s
    - Variable: `SITE_URL` = `https://filipecosta.eti.br`
    - Secrets: `MASTODON_URL` (ex.: `https://mastodon.social`), `MASTODON_TOKEN` (Preferências → Desenvolvimento → Nova aplicação, escopo `write:statuses`), `BLUESKY_HANDLE` (ex.: `voce.bsky.social`), `BLUESKY_APP_PASSWORD` (Configurações → Senhas de app).
 5. Acesse `https://filipecosta.eti.br/admin/`, faça login e adicione à tela inicial do celular.
+
+6. **Formulário de contato:** Netlify → Forms → Enable form detection. As mensagens aparecem em Forms → contato; em Forms → Form notifications dá para recebê-las por e-mail.
 
 ## Uso
 

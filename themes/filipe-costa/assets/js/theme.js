@@ -16,6 +16,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    // Formulário de contato: preenche o assunto vindo de ?interesse=
+    var assunto = document.getElementById('interesse');
+    if (assunto && !assunto.value) {
+      var interesse = new URLSearchParams(window.location.search).get('interesse');
+      if (interesse) assunto.value = interesse;
+    }
+
     var btn = document.querySelector('[data-theme-toggle]');
     if (!btn) return;
     label(btn);

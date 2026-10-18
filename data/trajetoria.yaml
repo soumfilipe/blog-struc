@@ -1,0 +1,14 @@
+# Linha do tempo da página Sobre, do mais recente para o mais antigo.
+# Preencha a partir do LinkedIn. Edite pelo painel (/admin → Dados) ou direto aqui.
+items:
+  - periodo: "[ANO] – hoje"
+    titulo: "[CARGO ATUAL]"
+    local: "[EMPRESA]"
+    texto: "[O que você faz hoje, em uma ou duas frases.]"
+  - periodo: "[ANO] – [ANO]"
+    titulo: "[CARGO ANTERIOR]"
+    local: "[EMPRESA]"
+    texto: "[Principal resultado ou aprendizado.]"
+  - periodo: "[ANO]"
+    titulo: "[FORMAÇÃO]"
+    local: "[INSTITUIÇÃO]"
