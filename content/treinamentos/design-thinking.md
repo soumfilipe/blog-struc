@@ -8,7 +8,7 @@ weight: 10
 status: em-atualizacao
 publico: [Setor público, ONGs, Movimentos sociais, Empresas]
 formato: "Presencial ou online · turma fechada"
-carga_horaria: "[XX] horas"
+carga_horaria: "8 horas (versão reduzida) ou 20 horas (versão básica)"
 entregaveis:
   - Domínio das etapas do design thinking, com ferramentas para cada uma
   - Um desafio real da organização trabalhado durante o curso
