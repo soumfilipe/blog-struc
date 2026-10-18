@@ -32,6 +32,10 @@ O curso é prático: a turma trabalha um desafio real da própria organização 
 ## Onde já foi aplicado
 
 - **2023**, Rede Brasilidade Solidária
-- **2019**, [NOME DA EMPRESA], formação interna
+- **2019**, Eleva Educação (hoje Grupo Salta Educação), formação interna
 
 O conteúdo está sendo atualizado. Fale comigo para saber da próxima turma ou para levar o curso à sua organização.
+
+## Quem conduz
+
+Filipe Costa, especialista em design thinking pela Echos (2019).

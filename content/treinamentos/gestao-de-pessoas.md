@@ -8,7 +8,6 @@ weight: 40
 status: em-breve
 publico: [Setor público, ONGs, Movimentos sociais]
 formato: "Presencial ou online · turma fechada ou aberta"
-carga_horaria: "[XX] horas"
 ---
 
 Este curso está em preparação. Deixe seu contato para ser avisado da primeira turma ou para levá-lo à sua organização.

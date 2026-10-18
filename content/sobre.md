@@ -3,11 +3,15 @@ title: "Sobre Filipe Costa"
 destaque: "Filipe Costa"
 layout: sobre
 rotulo: "sobre"
-subtitulo: "Programador, designer e especialista em processos. Trabalho para que tecnologia e método sirvam a quem trabalha e ao bem público."
+subtitulo: "Quinze anos entre código, processos e pessoas. Hoje ajudo equipes a se organizar para servir a quem trabalha e ao bem público."
 description: "Trajetória, formações e a visão de mundo por trás do trabalho de Filipe Costa."
 ---
 
-[Uma ou duas frases sobre o que você faz hoje: onde trabalha, há quanto tempo atua com processos e design, e o que mais gosta de resolver.]
+Comecei como desenvolvedor de software em 2011 e passei oito anos programando. No fim de 2019 troquei o código pelas pessoas: primeiro como líder técnico e, desde 2021, como agilista no Grupo Salta Educação, onde cuido da cultura ágil de quatro times de produto.
+
+Pelo caminho me especializei em design thinking (Echos, 2019) e em agilidade, com as certificações Advanced Certified ScrumMaster, Kanban System Design e Management 3.0. Hoje meu foco é a gestão de pessoas: treinar, facilitar e ajudar equipes a desenvolver o próprio potencial.
+
+Em 2026 comecei a estudar teoria crítica da sociedade na Universidade de Milão-Bicocca. É dali que vem boa parte da base dos meus textos.
 
 ## No que acredito
 

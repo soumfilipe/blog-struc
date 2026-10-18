@@ -8,7 +8,6 @@ weight: 20
 status: em-breve
 publico: [Setor público, ONGs, Movimentos sociais]
 formato: "Presencial ou online · turma fechada ou aberta"
-carga_horaria: "[XX] horas"
 ---
 
 Este curso está em preparação. Deixe seu contato para ser avisado da primeira turma ou para levá-lo à sua organização.
@@ -20,3 +19,7 @@ Este curso está em preparação. Deixe seu contato para ser avisado da primeira
 3. Quadros e acompanhamento visível
 4. Reuniões que decidem
 5. Agilidade com regras públicas e orçamento anual
+
+## Quem conduz
+
+Filipe Costa, agilista desde 2021 e Advanced Certified ScrumMaster (A-CSM) pela Scrum Alliance, com formação em Kanban System Design e Management 3.0.

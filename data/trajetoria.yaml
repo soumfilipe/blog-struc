@@ -1,14 +1,23 @@
 # Linha do tempo da página Sobre, do mais recente para o mais antigo.
-# Preencha a partir do LinkedIn. Edite pelo painel (/admin → Dados) ou direto aqui.
+# Edite pelo painel (/admin → Dados) ou direto aqui.
 items:
-  - periodo: "[ANO] – hoje"
-    titulo: "[CARGO ATUAL]"
-    local: "[EMPRESA]"
-    texto: "[O que você faz hoje, em uma ou duas frases.]"
-  - periodo: "[ANO] – [ANO]"
-    titulo: "[CARGO ANTERIOR]"
-    local: "[EMPRESA]"
-    texto: "[Principal resultado ou aprendizado.]"
-  - periodo: "[ANO]"
-    titulo: "[FORMAÇÃO]"
-    local: "[INSTITUIÇÃO]"
+  - periodo: "2021 – hoje"
+    titulo: Agilista
+    local: Grupo Salta Educação
+    texto: "Cuido da cultura ágil de quatro times de desenvolvimento de produtos: facilito reuniões e dinâmicas, acompanho o desempenho dos times de forma anônima para fortalecer o senso de equipe e faço conversas individuais para lidar com as situações mais delicadas."
+  - periodo: "2019 – 2021"
+    titulo: Desenvolvedor web e líder técnico
+    local: Eleva Educação (hoje Grupo Salta Educação) · Rio de Janeiro
+    texto: "Entrei como desenvolvedor dos sistemas pedagógico e de gestão das escolas e, no fim de 2019, passei a liderar o time do Sistema de Ensino, cuidando da melhoria do time e da relação com as demais equipes."
+  - periodo: "2020 – 2021"
+    titulo: Produtor executivo
+    local: Pospostos · freelance · Teresópolis
+    texto: "Produção executiva com planejamento em sprints."
+  - periodo: "2017 – 2019"
+    titulo: Desenvolvedor web e líder da equipe de suporte
+    local: MyCloud Software
+    texto: "Desenvolvi o sistema Gestech e depois liderei a equipe de suporte, com foco em melhoria de processos, gestão de conflitos e experimentação contínua."
+  - periodo: "2011 – 2016"
+    titulo: Estagiário e desenvolvedor de software
+    local: Alterdata Software · Teresópolis
+    texto: "Fiz parte do time do PDV Alterdata, solução de ponto de venda. Tive ali o primeiro contato com UX: repensamos a aplicação para facilitar a vida do operador e do consumidor e criamos uma identidade comum para todo o sistema."

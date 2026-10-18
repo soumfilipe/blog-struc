@@ -120,7 +120,7 @@ collections:
               - { label: Título, name: titulo, widget: string }
               - { label: Local, name: local, widget: string, required: false }
               - { label: Texto, name: texto, widget: text, required: false }
-      - label: Formações e projetos
+      - label: Formações que conduzi
         name: experiencias
         file: data/experiencias.yaml
         fields:
@@ -131,4 +131,16 @@ collections:
               - { label: Ano, name: ano, widget: number }
               - { label: Organização, name: organizacao, widget: string }
               - { label: O que foi feito, name: atividade, widget: string }
+              - { label: Link, name: url, widget: string, required: false }
+      - label: Formação e certificações
+        name: formacao
+        file: data/formacao.yaml
+        fields:
+          - label: Itens
+            name: items
+            widget: list
+            fields:
+              - { label: Ano, name: ano, widget: number }
+              - { label: Instituição, name: organizacao, widget: string }
+              - { label: Curso ou certificação, name: atividade, widget: string }
               - { label: Link, name: url, widget: string, required: false }

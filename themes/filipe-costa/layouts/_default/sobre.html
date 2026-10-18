@@ -31,7 +31,14 @@
 
   {{- with site.Data.experiencias.items }}
   <section class="section" aria-labelledby="experiencias">
-    <h2 id="experiencias" class="h2" style="margin-bottom: var(--space-8)">Formações e projetos</h2>
+    <h2 id="experiencias" class="h2" style="margin-bottom: var(--space-8)">Formações que conduzi</h2>
+    {{ partial "experiencias.html" . }}
+  </section>
+  {{- end }}
+
+  {{- with site.Data.formacao.items }}
+  <section class="section" aria-labelledby="formacao">
+    <h2 id="formacao" class="h2" style="margin-bottom: var(--space-8)">Formação e certificações</h2>
     {{ partial "experiencias.html" . }}
   </section>
   {{- end }}
