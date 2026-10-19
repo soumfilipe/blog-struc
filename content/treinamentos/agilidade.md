@@ -6,7 +6,7 @@ description: "Planejar em ciclos curtos, decidir com clareza e entregar com regu
 icone: rapido
 weight: 20
 status: em-breve
-publico: [Setor público, ONGs, Movimentos sociais]
+publico: [Setor público, ONGs, Movimentos sociais, Empresas]
 formato: "Presencial ou online · turma fechada ou aberta"
 ---
 
@@ -22,4 +22,4 @@ Este curso está em preparação. Deixe seu contato para ser avisado da primeira
 
 ## Quem conduz
 
-Filipe Costa, agilista desde 2021 e Advanced Certified ScrumMaster (A-CSM) pela Scrum Alliance, com formação em Kanban System Design e Management 3.0.
+Eu mesmo, Filipe Costa, agilista desde 2021 e Advanced Certified ScrumMaster (A-CSM) pela Scrum Alliance, com formação em Kanban System Design e Management 3.0.
