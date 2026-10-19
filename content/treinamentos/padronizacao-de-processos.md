@@ -6,7 +6,7 @@ description: "Mapear, simplificar e documentar processos para que o trabalho nã
 icone: processo
 weight: 30
 status: em-breve
-publico: [Setor público, ONGs, Movimentos sociais]
+publico: [Setor público, ONGs, Movimentos sociais, Empresas]
 formato: "Presencial ou online · turma fechada ou aberta"
 ---
 
