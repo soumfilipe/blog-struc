@@ -8,7 +8,7 @@ description: "Conte o contexto da sua organização e o que vocês precisam reso
 
 **Como funciona**
 
-A primeira conversa é sem custo e serve para entender o problema. Se fizer sentido trabalharmos juntos, mando uma proposta com escopo, prazo e valor.
+A primeira conversa serve para entender o problema. Se fizer sentido trabalharmos juntos, mando uma proposta com escopo, prazo e valor.
 
 **Prefere outro canal?**
 
