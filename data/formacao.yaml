@@ -1,0 +1,39 @@
+# Formação acadêmica e certificações da página Sobre.
+# Edite pelo painel (/admin → Dados) ou direto aqui.
+items:
+  - ano: 2026
+    organizacao: Università degli Studi di Milano-Bicocca
+    atividade: Teoria crítica da sociedade (Filosofia), em andamento
+  - ano: 2024
+    organizacao: Software Zen
+    atividade: Métricas para agilidade organizacional
+  - ano: 2024
+    organizacao: Management 3.0
+    atividade: Agile Change Leadership Workshop
+  - ano: 2022
+    organizacao: Scrum Alliance
+    atividade: Advanced Certified ScrumMaster (A-CSM)
+  - ano: 2022
+    organizacao: Bernard de Luna
+    atividade: Fundamentos de gestão de produtos
+  - ano: 2021
+    organizacao: Kanban University
+    atividade: Kanban System Design (KMP I)
+  - ano: 2021
+    organizacao: Management 3.0
+    atividade: Imersão Management 3.0
+  - ano: 2021
+    organizacao: PUCRS
+    atividade: Certificação em liderança, capacidade de aprender e resiliência
+  - ano: 2021
+    organizacao: Scrum Alliance
+    atividade: Advanced Certified Scrum Developer (A-CSD)
+  - ano: 2020
+    organizacao: Scrum Alliance
+    atividade: Certified ScrumMaster (CSM) e Certified Scrum Developer (CSD)
+  - ano: 2019
+    organizacao: Echos Desirable Futures
+    atividade: Especialização em design thinking
+  - ano: 2012
+    organizacao: UNOPAR
+    atividade: Tecnologia em Análise e Desenvolvimento de Sistemas (2009–2012)

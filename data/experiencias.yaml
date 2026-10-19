@@ -1,0 +1,9 @@
+# Formações e projetos que aparecem na página inicial e na página Sobre.
+# Edite pelo painel (/admin → Dados) ou direto aqui.
+items:
+  - ano: 2023
+    organizacao: Rede Brasilidade Solidária
+    atividade: Formação em design thinking
+  - ano: 2019
+    organizacao: Eleva Educação (hoje Grupo Salta Educação)
+    atividade: Formação em design thinking para equipes internas

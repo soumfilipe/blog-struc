@@ -1,0 +1,12 @@
+{{- /* Lista de experiências: recebe uma lista com ano, organizacao, atividade e, opcionalmente, url */ -}}
+<ul class="post-list">
+  {{- range sort . "ano" "desc" }}
+  <li class="post-list__item">
+    <span class="label">{{ .ano }}</span>
+    <div>
+      <p class="experience__org">{{ with .url }}<a href="{{ . }}" rel="noopener">{{ end }}{{ .organizacao }}{{ with .url }}</a>{{ end }}</p>
+      <p class="experience__what">{{ .atividade }}</p>
+    </div>
+  </li>
+  {{- end }}
+</ul>

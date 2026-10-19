@@ -251,3 +251,136 @@
   .icon--draw :is(path, polyline, line, circle, rect, polygon) { stroke-dashoffset: 0; }
   .cursor::after { opacity: 1; }   /* cursor fixo */
 }
+
+/* ---------- Utilitários ---------- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Página inicial ---------- */
+.hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
+
+.door .icon { color: var(--accent); }
+.door.card--accent .icon { color: var(--on-accent); }
+
+.audience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-8) var(--space-6);
+  margin: 0; padding: 0; list-style: none;
+}
+.audience__item { border-top: var(--border-width-strong) solid var(--accent); padding-top: var(--space-4); }
+.audience__item p { margin: var(--space-2) 0 0; color: var(--text-2); }
+
+.experience__org { margin: 0; font: 700 1.25rem/1.25 var(--font-display); }
+.experience__org a { color: var(--text); text-decoration: none; }
+.experience__org a:hover { color: var(--accent); }
+.experience__what { margin: var(--space-1) 0 0; color: var(--text-2); }
+
+/* Faixa de chamada: o único bloco roxo da tela */
+.cta-band {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-radius: var(--radius-panel);
+  background: var(--accent-fill);
+  color: var(--on-accent);
+}
+.cta-band .label { color: var(--on-accent); }
+.cta-band .h2 { margin-top: var(--space-2); max-width: 18ch; }
+.cta-band__text { margin: var(--space-4) 0 0; max-width: 34rem; font-size: var(--text-body-lg); }
+.cta-band__btn { border-color: var(--on-accent); color: var(--on-accent); background-image: linear-gradient(var(--on-accent), var(--on-accent)); }
+.cta-band__btn:hover, .cta-band__btn:focus-visible { color: var(--accent-fill); }
+.cta-band__btn:focus-visible { outline-color: var(--on-accent); }
+
+/* ---------- Ofertas (consultoria e treinamentos) ---------- */
+.offer-grid { margin-top: var(--space-8); }
+.offer-card__top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); min-height: 2rem; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .625rem;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-pill);
+  font: 400 var(--text-label)/1.2 var(--font-mono);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-2);
+  white-space: nowrap;
+}
+.badge--disponivel { border-color: var(--success-border); color: var(--success-text); }
+.badge--em-atualizacao { border-color: var(--accent); color: var(--accent); }
+
+.offer {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) minmax(14rem, 20rem);
+  gap: var(--space-12);
+  align-items: start;
+}
+.offer__facts {
+  position: sticky;
+  top: var(--space-6);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  background: var(--surface);
+}
+.offer__cta { width: 100%; margin-top: var(--space-6); }
+@media (max-width: 56rem) {
+  .offer { grid-template-columns: 1fr; gap: var(--space-8); }
+  .offer__facts { position: static; order: -1; }
+}
+
+.facts { display: grid; gap: var(--space-4); margin: 0; }
+.facts dd { margin: var(--space-1) 0 0; font-weight: 700; }
+
+/* ---------- Trajetória ---------- */
+.timeline { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.timeline__item {
+  position: relative;
+  padding: 0 0 var(--space-8) var(--space-8);
+  border-left: var(--border-width-strong) solid var(--border);
+}
+.timeline__item:last-child { padding-bottom: 0; }
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -7px; top: .2rem;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--accent-fill);
+}
+.timeline__title { margin: var(--space-2) 0 var(--space-1); font: 700 1.375rem/1.2 var(--font-display); }
+.timeline__text { margin: var(--space-2) 0 0; color: var(--text-2); }
+
+/* ---------- Contato ---------- */
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--space-12);
+  align-items: start;
+}
+@media (max-width: 56rem) { .contact { grid-template-columns: 1fr; } }
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.form__wide { grid-column: 1 / -1; }
+@media (max-width: 40rem) { .form { grid-template-columns: 1fr; } }
+textarea.field__input { resize: vertical; min-height: 9rem; line-height: 1.5; }
+select.field__input { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--text-2) 50%), linear-gradient(135deg, var(--text-2) 50%, transparent 50%); background-position: calc(100% - 1.25rem) 50%, calc(100% - .9rem) 50%; background-size: .35rem .35rem; background-repeat: no-repeat; padding-right: 2.5rem; }
+.form__consent { display: flex; gap: var(--space-3); align-items: flex-start; color: var(--text-2); font-size: var(--text-small); }
+.form__consent input { width: 1.25rem; height: 1.25rem; margin-top: .1rem; accent-color: var(--accent); flex: none; }
+.contact__aside { font-family: var(--font-display); font-size: var(--text-body); }
+
+/* No celular, o botão do cabeçalho sai: o hero e a faixa final já levam ao contato */
+@media (max-width: 40rem) {
+  .site-header__actions .btn--primary { display: none; }
+}
