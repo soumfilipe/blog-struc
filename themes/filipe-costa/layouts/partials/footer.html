@@ -15,7 +15,14 @@
       {{- end }}
     </ul>
   </div>
-  <div class="container">
+  <div class="container site-footer__bottom">
     <p class="label site-footer__note">© {{ now.Year }} {{ site.Params.author | default site.Title }}{{ with site.Params.footerNote }} · {{ . }}{{ end }}</p>
+    {{- with site.Menus.footer }}
+    <ul class="site-footer__legal">
+      {{- range . }}
+      <li><a class="label" href="{{ .URL }}">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
   </div>
 </footer>

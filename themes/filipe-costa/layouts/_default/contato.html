@@ -46,7 +46,7 @@
       </div>
       <div class="form__wide form__consent">
         <input id="aceite" name="aceite" type="checkbox" value="sim" required>
-        <label for="aceite">Concordo em ser contatado pelo e-mail informado. Os dados são usados só para responder a esta mensagem.</label>
+        <label for="aceite">Concordo em ser contatado pelo e-mail informado. Os dados são usados só para responder a esta mensagem.{{ with site.GetPage "/privacidade" }} Veja a <a href="{{ .RelPermalink }}" target="_blank" rel="noopener">política de privacidade</a>.{{ end }}</label>
       </div>
       <div class="form__wide">
         <button class="btn btn--primary" type="submit">enviar {{ partial "icon.html" (dict "name" "seguir") }}</button>
