@@ -38,7 +38,7 @@ Estas são as empresas que recebem dados de quem visita o site ou usa o formulá
 
 ## Links externos
 
-O site tem links para outros sites. Ao segui-los, você passa a valer a política de privacidade de cada um deles.
+O site tem links para outros sites. Ao segui-los, passa a valer a política de privacidade de cada um deles.
 
 ## Seus direitos
 
