@@ -44,24 +44,7 @@
 </section>
 {{- end }}
 
-{{- /* 3. Para quem */}}
-{{- with $home.publicos }}
-<section class="section container" aria-labelledby="publicos">
-  <div class="section__head">
-    <h2 id="publicos" class="h2">{{ $home.publicosTitulo | default "Para quem" }}</h2>
-  </div>
-  <ul class="audience">
-    {{- range . }}
-    <li class="audience__item">
-      <span class="label label--accent">{{ .nome }}</span>
-      <p>{{ .texto }}</p>
-    </li>
-    {{- end }}
-  </ul>
-</section>
-{{- end }}
-
-{{- /* 4. Onde já atuei (data/experiencias.yaml) */}}
+{{- /* 3. Onde já atuei (data/experiencias.yaml) */}}
 {{- with site.Data.experiencias.items }}
 <section class="section container" aria-labelledby="experiencias">
   <div class="section__head">
@@ -74,7 +57,7 @@
 </section>
 {{- end }}
 
-{{- /* 5. Últimos textos */}}
+{{- /* 4. Últimos textos */}}
 {{- $pages := site.RegularPages }}
 {{- with site.Params.mainSections }}
   {{- $pages = where site.RegularPages "Section" "in" . }}
@@ -92,6 +75,6 @@
 </section>
 {{- end }}
 
-{{- /* 6. Chamada final */}}
+{{- /* 5. Chamada final */}}
 {{ partial "cta.html" . }}
 {{ end }}

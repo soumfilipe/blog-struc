@@ -410,16 +410,6 @@
 /* ---------- Página inicial ---------- */
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
 
-
-.audience {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-  gap: var(--space-8) var(--space-6);
-  margin: 0; padding: 0; list-style: none;
-}
-.audience__item { border-top: var(--border-width-strong) solid var(--accent); padding-top: var(--space-4); }
-.audience__item p { margin: var(--space-2) 0 0; color: var(--text-2); }
-
 .experience__org { margin: 0; font: 700 1.25rem/1.25 var(--font-display); }
 .experience__org a { color: var(--text); text-decoration: none; }
 .experience__org a:hover { color: var(--accent); }
