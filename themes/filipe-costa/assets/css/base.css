@@ -134,3 +134,16 @@ main:focus { outline: none; }
 .page-head { padding-block: clamp(2.5rem, 7vw, 5rem) var(--space-8); }
 .page-head .h1 { margin-top: var(--space-4); }
 .page-head .lead { margin-top: var(--space-4); }
+
+.site-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2) var(--space-6);
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+.site-footer__bottom .site-footer__note { margin-top: 0; }
+.site-footer__legal { display: flex; gap: var(--space-6); margin: 0; padding: 0; list-style: none; }
+.site-footer__legal a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.site-footer__legal a:hover { color: var(--accent); }

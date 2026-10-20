@@ -99,6 +99,11 @@ enableRobotsTXT = true
   pageRef = "/sobre"
   weight = 40
 
+[[menus.footer]]
+  name = "política de privacidade"
+  pageRef = "/privacidade"
+  weight = 10
+
 # Necessário para o realce de sintaxe usar as cores da marca
 [markup]
   [markup.highlight]
