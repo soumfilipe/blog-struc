@@ -44,7 +44,6 @@ enableRobotsTXT = true
   # Seções da página inicial
   [params.home]
     portasTitulo = "Como posso ajudar"
-    publicosTitulo = "Para quem trabalho"
     [[params.home.portas]]
       pagina = "/consultoria"
       icone = "processo"
@@ -56,18 +55,6 @@ enableRobotsTXT = true
       pagina = "/posts"
       rotulo = "textos"
       icone = "terminal"
-    [[params.home.publicos]]
-      nome = "Setor público"
-      texto = "Equipes que precisam entregar mais com orçamento curto e regras rígidas, sem perder o cidadão de vista."
-    [[params.home.publicos]]
-      nome = "ONGs"
-      texto = "Organizações que cresceram e precisam de processo sem virar burocracia."
-    [[params.home.publicos]]
-      nome = "Movimentos sociais"
-      texto = "Coletivos que decidem juntos e precisam transformar decisão em ação organizada."
-    [[params.home.publicos]]
-      nome = "Economia solidária"
-      texto = "Cooperativas e empreendimentos em que a gestão é coletiva e o método precisa respeitar isso."
 
   # Faixa de chamada no fim das páginas
   [params.ctaBand]
