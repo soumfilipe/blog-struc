@@ -1,0 +1,5 @@
+{{- /* Card de post. (dict "page" $p "large" true "variant" 0 "tag" "…"); "tag" troca a etiqueta da categoria. */ -}}
+{{- $p := .page -}}
+{{- $tag := .tag | default (index ($p.Params.categories | default (slice "")) 0) -}}
+{{- $meta := printf `<time datetime="%s">%s</time> · %d min` ($p.Date.Format "2006-01-02") ($p.Date | time.Format (cond .large ":date_medium" ":date_short")) $p.ReadingTime -}}
+{{ partial "tile.html" (dict "page" $p "large" .large "variant" .variant "tag" $tag "summary" (partial "description.html" $p) "meta" $meta "level" .level) }}

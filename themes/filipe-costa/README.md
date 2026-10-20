@@ -39,7 +39,7 @@ hugo server --themesDir ../..
 | `wordmark` | Texto do logo. Padrão: `filipe costa` |
 | `tagline` | Rótulo mono do rodapé. Padrão: `programador - designer - processos` |
 | `mainSections` | Seções cujos posts aparecem na página inicial. Vazio = todas as páginas |
-| `homePosts` | Quantos posts na página inicial. Padrão: 7 |
+| `homePosts` | Quantos posts na página inicial. Padrão: 3. Com 5 ou mais, o mosaico ganha o destaque grande à direita |
 | `archive` | Link do botão "ver todos" na página inicial |
 | `toc` | Mostra o sumário nos posts. Também pode ser ligado por post |
 | `ogImage` | Imagem padrão para compartilhamento |
@@ -59,7 +59,10 @@ hugo server --themesDir ../..
 | `toc` | `true` para mostrar o sumário |
 | `pagina` | `true` para páginas sem data, autor nem navegação entre posts (ex.: "Sobre") |
 | `tema` | `light` ou `dark` para forçar um tema na página. A escolha do leitor prevalece |
-| `imagem` | Imagem de compartilhamento do post |
+| `imagem` | Capa do post, serviço, curso ou página: aparece no mosaico, no topo do post e no compartilhamento. Só imagens do próprio site; sem ela, o card ganha uma capa automática com as cores da marca. Para gerar as versões menores em WebP, a pasta de envio precisa estar montada em `assets/` (veja o `hugo.toml` do site) |
+| `imagem_alt` | Descrição da capa, lida no topo da página. Nos cards a capa é decorativa |
+
+Posts, serviços, cursos e as seções da página inicial aparecem em mosaicos de cards com capa (`partials/tile.html`). Com 5 ou mais cards, o primeiro fica grande à direita e quatro em 2×2 ao lado; com 2 a 4, o destaque fica à esquerda e os demais empilhados. Em "Como posso ajudar", o card grande é a porta com `destaque = true`.
 
 ## Shortcodes
 

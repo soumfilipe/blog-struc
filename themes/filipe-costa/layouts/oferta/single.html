@@ -12,6 +12,8 @@
     {{- end }}
   </header>
 
+  {{ partial "page-cover.html" . }}
+
   <div class="offer">
     <div class="prose offer__body">
       {{ .Content }}
@@ -51,17 +53,7 @@
   {{- with where $section.Pages "Permalink" "!=" .Permalink }}
   <nav class="section" aria-labelledby="outras">
     <h2 id="outras" class="h3" style="margin-bottom: var(--space-6)">Veja também</h2>
-    <div class="card-grid">
-      {{- range first 3 .ByWeight }}
-      <article class="card">
-        <div class="offer-card__top">
-          {{ with .Params.icone }}{{ partial "icon.html" (dict "name" . "class" "icon--accent") }}{{ end }}
-          {{ partial "offer-status.html" . }}
-        </div>
-        <h3 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      </article>
-      {{- end }}
-    </div>
+    {{ partial "mosaic.html" (dict "pages" (first 3 .ByWeight) "kind" "offer") }}
   </nav>
   {{- end }}
 </article>

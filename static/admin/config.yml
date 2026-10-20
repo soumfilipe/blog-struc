@@ -22,6 +22,8 @@ collections:
       - { label: Palavra em destaque (aparece em roxo no título), name: destaque, widget: string, required: false }
       - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
       - { label: Resumo (usado no post das redes), name: summary, widget: text, required: false }
+      - { label: Imagem de capa (opcional; sem ela o site desenha uma capa com as cores da marca), name: imagem, widget: image, required: false }
+      - { label: Descrição da imagem (para quem usa leitor de tela), name: imagem_alt, widget: string, required: false }
       - { label: Autor, name: author, widget: hidden, default: Filipe }
       - { label: Categorias, name: categories, widget: list, required: false }
       - { label: Tags, name: tags, widget: list, required: false }
@@ -45,6 +47,8 @@ collections:
       - { label: Título, name: title, widget: string }
       - { label: Palavra em destaque (aparece em roxo no título), name: destaque, widget: string, required: false }
       - { label: Resumo (uma frase), name: description, widget: text }
+      - { label: Imagem de capa (opcional; sem ela o site desenha uma capa com as cores da marca), name: imagem, widget: image, required: false }
+      - { label: Descrição da imagem (para quem usa leitor de tela), name: imagem_alt, widget: string, required: false }
       - { label: Ícone, name: icone, widget: select, required: false, options: [processo, design, rapido, perfil, codigo, terminal, agenda, busca, link, ok, ajustes, novo] }
       - { label: Ordem na lista, name: weight, widget: number, default: 50 }
       - { label: Situação, name: status, widget: select, required: false, options: [{ label: Disponível, value: disponivel }, { label: Em atualização, value: em-atualizacao }, { label: Em breve, value: em-breve }] }
@@ -71,6 +75,8 @@ collections:
       - { label: Título, name: title, widget: string }
       - { label: Palavra em destaque (aparece em roxo no título), name: destaque, widget: string, required: false }
       - { label: Resumo (uma frase), name: description, widget: text }
+      - { label: Imagem de capa (opcional; sem ela o site desenha uma capa com as cores da marca), name: imagem, widget: image, required: false }
+      - { label: Descrição da imagem (para quem usa leitor de tela), name: imagem_alt, widget: string, required: false }
       - { label: Ícone, name: icone, widget: select, required: false, options: [processo, design, rapido, perfil, codigo, terminal, agenda, busca, link, ok, ajustes, novo] }
       - { label: Ordem na lista, name: weight, widget: number, default: 50 }
       - { label: Situação, name: status, widget: select, required: false, options: [{ label: Disponível, value: disponivel }, { label: Em atualização, value: em-atualizacao }, { label: Em breve, value: em-breve }] }
@@ -93,6 +99,8 @@ collections:
           - { label: Palavra em destaque, name: destaque, widget: string, required: false }
           - { label: Subtítulo, name: subtitulo, widget: text, required: false }
           - { label: Descrição (buscadores e redes), name: description, widget: text, required: false }
+          - { label: Imagem no topo (opcional), name: imagem, widget: image, required: false }
+          - { label: Descrição da imagem (para quem usa leitor de tela), name: imagem_alt, widget: string, required: false }
           - { label: Layout, name: layout, widget: hidden, default: sobre }
           - { label: Texto, name: body, widget: markdown }
       - label: Contato

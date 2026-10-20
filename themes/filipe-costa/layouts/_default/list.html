@@ -14,14 +14,7 @@
   {{- end }}
 
   {{- $paginator := .Paginate .Pages }}
-  <ul class="post-list">
-    {{- range $paginator.Pages }}
-    <li class="post-list__item">
-      {{ partial "post-meta.html" . }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{- end }}
-  </ul>
+  {{ partial "mosaic.html" (dict "pages" $paginator.Pages "hero" (eq $paginator.PageNumber 1)) }}
 
   {{- if gt $paginator.TotalPages 1 }}
   <nav class="pagination" aria-label="Paginação">

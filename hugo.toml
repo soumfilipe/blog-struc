@@ -20,7 +20,7 @@ enableRobotsTXT = true
   description = "Consultoria e formação em processos, design e agilidade para o setor público, ONGs e movimentos sociais."
   mainSections = ["posts"]
   archive = "/posts/"
-  homePosts = 3
+  homePosts = 5
 
   # Rascunho de posicionamento: revisar antes de publicar
   [params.hero]
@@ -111,3 +111,26 @@ enableRobotsTXT = true
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 3
+
+# As imagens enviadas pelo painel (static/uploads) também entram como recursos,
+# para o tema gerar versões menores em WebP das capas. Declarar mounts substitui
+# os padrões, por isso as pastas de sempre estão listadas também.
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "static/uploads"
+    target = "assets/uploads"

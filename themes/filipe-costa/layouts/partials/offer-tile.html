@@ -1,0 +1,17 @@
+{{- /* Card de serviço ou curso: ícone, situação, título, resumo e formato. (dict "page" $p "large" true "variant" 0) */ -}}
+{{- $p := .page -}}
+{{- $labels := dict "disponivel" "disponível" "em-atualizacao" "em atualização" "em-breve" "em breve" -}}
+{{- $tag := "" -}}
+{{- $tagClass := "" -}}
+{{- with $p.Params.status }}
+  {{- $tag = index $labels . | default . }}
+  {{- $tagClass = printf "tile__tag--%s" . }}
+{{- end -}}
+{{- $meta := slice -}}
+{{- if .large }}
+  {{- with $p.Params.formato }}{{ $meta = $meta | append . }}{{ end }}
+  {{- with $p.Params.carga_horaria }}{{ $meta = $meta | append . }}{{ end }}
+{{- else }}
+  {{- with or $p.Params.carga_horaria $p.Params.duracao (index (split ($p.Params.formato | default "") " · ") 0) }}{{ $meta = $meta | append . }}{{ end }}
+{{- end -}}
+{{ partial "tile.html" (dict "page" $p "large" .large "variant" .variant "icon" $p.Params.icone "tag" $tag "tagClass" $tagClass "summary" (partial "description.html" $p) "showSummary" .showSummary "meta" (delimit $meta " · " | htmlEscape) "level" .level) }}

@@ -12,23 +12,8 @@
   <div class="prose">{{ . }}</div>
   {{- end }}
 
-  <div class="card-grid offer-grid">
-    {{- range .Pages.ByWeight }}
-    <article class="card">
-      <div class="offer-card__top">
-        {{ with .Params.icone }}{{ partial "icon.html" (dict "name" . "class" "icon--32 icon--accent") }}{{ end }}
-        {{ partial "offer-status.html" . }}
-      </div>
-      <h2 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{- with partial "description.html" . }}
-      <p class="card__summary">{{ . }}</p>
-      {{- end }}
-      <span class="label card__meta">
-        {{- with .Params.formato }}{{ . }}{{ end }}
-        {{- with .Params.carga_horaria }} · {{ . }}{{ end }}
-      </span>
-    </article>
-    {{- end }}
+  <div class="offer-grid">
+    {{ partial "mosaic.html" (dict "pages" .Pages.ByWeight "hero" true "kind" "offer" "level" 2) }}
   </div>
 </section>
 

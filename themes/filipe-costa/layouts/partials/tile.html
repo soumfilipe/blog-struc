@@ -1,0 +1,37 @@
+{{- /*
+  Card com capa e título sobre a imagem. Base dos mosaicos de textos, ofertas e da página inicial.
+  (dict
+    "page" $p        página do link e da capa (campo "imagem")
+    "large" true     destaque do mosaico: título maior e resumo
+    "variant" 0      capa automática a usar quando não há imagem
+    "tag" "…"        etiqueta acima do título; "tagClass" muda o estilo dela
+    "icon" "…"       ícone no canto superior
+    "summary" "…"    resumo; nos cards pequenos só aparece com "showSummary"
+    "meta" "…"       linha de rodapé (HTML)
+    "level" 3        nível do título)
+*/ -}}
+{{- $p := .page -}}
+{{- $level := .level | default 3 -}}
+<article class="tile{{ if .large }} tile--lg{{ end }}">
+  <div class="tile__media">
+    {{ partial "cover.html" (dict "page" $p "variant" .variant "sizes" (cond .large "(max-width: 56rem) 100vw, 36rem" "(max-width: 40rem) 100vw, (max-width: 56rem) 50vw, 18rem")) }}
+  </div>
+  {{- with .icon }}
+  <span class="tile__icon">{{ partial "icon.html" (dict "name" . "class" "icon--32") }}</span>
+  {{- end }}
+  <div class="tile__body">
+    {{- with .tag }}
+    <span class="tile__tag{{ with $.tagClass }} {{ . }}{{ end }}">{{ . }}</span>
+    {{- end }}
+    <h{{ $level }} class="tile__title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h{{ $level }}>
+    {{- if or .large .showSummary }}
+    {{- with .summary }}
+    <p class="tile__summary">{{ . | truncate (cond $.large 180 120) }}</p>
+    {{- end }}
+    {{- end }}
+    <div class="tile__foot">
+      <span class="label">{{ .meta | safeHTML }}</span>
+      <span class="tile__arrow">{{ partial "icon.html" (dict "name" "seguir" "class" "icon--16") }}</span>
+    </div>
+  </div>
+</article>

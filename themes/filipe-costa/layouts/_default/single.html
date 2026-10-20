@@ -22,6 +22,8 @@
     {{- end }}
   </header>
 
+  {{ partial "page-cover.html" . }}
+
   {{- if and (.Params.toc | default site.Params.toc) (gt (len .Fragments.Headings) 0) }}
   <div class="toc">
     <details>
@@ -61,18 +63,14 @@
 
   {{- if or .PrevInSection .NextInSection }}
   <nav class="post-nav" aria-label="Outros textos">
-    {{- with .NextInSection }}
-    <article class="card">
-      <span class="label">{{ partial "icon.html" (dict "name" "voltar" "class" "icon--16") }} mais recente</span>
-      <h2 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    </article>
-    {{- end }}
-    {{- with .PrevInSection }}
-    <article class="card card--next">
-      <span class="label">mais antigo {{ partial "icon.html" (dict "name" "seguir" "class" "icon--16") }}</span>
-      <h2 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    </article>
-    {{- end }}
+    <div class="mosaic mosaic--pair">
+      {{- with .NextInSection }}
+      {{ partial "post-tile.html" (dict "page" . "variant" 1 "tag" "← mais recente" "level" 2) }}
+      {{- end }}
+      {{- with .PrevInSection }}
+      {{ partial "post-tile.html" (dict "page" . "variant" 2 "tag" "mais antigo →" "level" 2) }}
+      {{- end }}
+    </div>
   </nav>
   {{- end }}
   {{- end }}

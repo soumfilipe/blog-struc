@@ -1,0 +1,11 @@
+{{- /*
+  Classe do mosaico para n cards. (dict "n" 5 "hero" true)
+  Sem "hero": grade simples. Com "hero": de 5 em diante, destaque grande à direita e 2×2 ao lado;
+  de 2 a 4, destaque à esquerda e os demais empilhados à direita.
+*/ -}}
+{{- $c := "mosaic" -}}
+{{- if .hero -}}
+  {{- if ge .n 5 }}{{ $c = "mosaic mosaic--hero" }}
+  {{- else if ge .n 2 }}{{ $c = printf "mosaic mosaic--feature mosaic--rows-%d" (sub .n 1) }}{{ end -}}
+{{- end -}}
+{{- return $c -}}
