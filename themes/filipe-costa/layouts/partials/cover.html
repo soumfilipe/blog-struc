@@ -1,0 +1,35 @@
+{{- /*
+  Capa de um post. (dict "page" $p "sizes" "…" "alt" "…" "eager" true)
+  "eager" carrega a imagem logo, para a capa no topo da página.
+  Usa a imagem do campo "imagem" (enviada pelo painel, em /uploads/) e gera versões
+  menores em WebP. Sem imagem, desenha uma capa automática com as cores da marca,
+  escolhida pela posição no mosaico ("variant") para os cards vizinhos não ficarem
+  iguais, ou pelo título quando não há posição.
+  Só aceita imagens do próprio site: endereço de outro domínio vira capa automática,
+  para nenhuma página carregar recurso de terceiros.
+*/ -}}
+{{- $p := .page -}}
+{{- $src := or $p.Params.imagem $p.Params.image -}}
+{{- $alt := .alt | default "" -}}
+{{- $sizes := .sizes | default "(max-width: 40rem) 100vw, 50vw" -}}
+{{- $local := and $src (not (strings.Contains $src "//")) -}}
+{{- if $local -}}
+  {{- $img := resources.Get (strings.TrimPrefix "/" $src) -}}
+  {{- if and $img (eq $img.ResourceType "image") (ne $img.MediaType.SubType "svg") -}}
+    {{- $set := slice -}}
+    {{- range slice 640 1024 1600 -}}
+      {{- if ge $img.Width . -}}
+        {{- $r := $img.Resize (printf "%dx webp q78" .) -}}
+        {{- $set = $set | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $fallback := $img -}}
+    {{- if gt $img.Width 1024 }}{{ $fallback = $img.Resize "1024x webp q78" }}{{ end -}}
+<img class="cover" src="{{ $fallback.RelPermalink }}"{{ with $set }} srcset="{{ delimit . ", " }}" sizes="{{ $sizes }}"{{ end }} width="{{ $fallback.Width }}" height="{{ $fallback.Height }}" alt="{{ $alt }}" {{ if .eager }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async">
+  {{- else -}}
+<img class="cover" src="{{ $src | relURL }}" alt="{{ $alt }}" {{ if .eager }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async">
+  {{- end -}}
+{{- else -}}
+  {{- $variant := mod (cond (isset . "variant") .variant (hash.FNV32a $p.Title)) 4 -}}
+<div class="cover cover--auto cover--auto-{{ $variant }}" aria-hidden="true"></div>
+{{- end -}}

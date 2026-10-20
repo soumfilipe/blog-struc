@@ -1,0 +1,11 @@
+{{- /*
+  Mosaico de posts. (dict "pages" $pages "hero" true)
+  Com "hero" e pelo menos cinco posts, o primeiro vira o destaque grande à direita
+  e os quatro seguintes ficam em grade 2×2 ao lado. Os demais seguem em grade.
+*/ -}}
+{{- $hero := and .hero (ge (len .pages) 5) -}}
+<div class="mosaic{{ if $hero }} mosaic--hero{{ end }}">
+  {{- range $i, $p := .pages }}
+  {{ partial "post-tile.html" (dict "page" $p "variant" $i "large" (and $hero (eq $i 0))) }}
+  {{- end }}
+</div>

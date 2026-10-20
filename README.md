@@ -43,6 +43,6 @@ Os posts publicados antes da migração já têm `syndicated: true`, para não s
 
 ## Uso
 
-Crie o post no `/admin`, deixe "Rascunho" desligado e publique. A Action espera o site ficar no ar, posta nas redes e grava `syndicated: true` no arquivo para não repetir.
+Crie o post no `/admin`, deixe "Rascunho" desligado e publique. A imagem de capa é opcional: sem ela, o site desenha uma capa com as cores da marca. A Action espera o site ficar no ar, posta nas redes e grava `syndicated: true` no arquivo para não repetir.
 
 Para ver o site localmente: `hugo server` (Hugo 0.128 ou mais novo).

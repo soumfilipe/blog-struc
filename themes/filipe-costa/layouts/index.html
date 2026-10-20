@@ -93,11 +93,7 @@
     <a class="btn" href="{{ . | relURL }}">ver todos {{ partial "icon.html" (dict "name" "seguir") }}</a>
     {{- end }}
   </div>
-  <div class="card-grid">
-    {{- range first $limit $pages }}
-    {{ partial "post-card.html" (dict "page" .) }}
-    {{- end }}
-  </div>
+  {{ partial "mosaic.html" (dict "pages" (first $limit $pages) "hero" true) }}
 </section>
 {{- end }}
 

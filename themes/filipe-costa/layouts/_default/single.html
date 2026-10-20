@@ -22,6 +22,12 @@
     {{- end }}
   </header>
 
+  {{- if and $isPost (or .Params.imagem .Params.image) }}
+  <figure class="post-cover">
+    {{ partial "cover.html" (dict "page" . "sizes" "(max-width: 72rem) 100vw, 72rem" "alt" (.Params.imagem_alt | default "") "eager" true) }}
+  </figure>
+  {{- end }}
+
   {{- if and (.Params.toc | default site.Params.toc) (gt (len .Fragments.Headings) 0) }}
   <div class="toc">
     <details>
