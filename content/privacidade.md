@@ -29,16 +29,13 @@ O site guarda uma única informação no seu próprio navegador: se você prefer
 
 ## Ferramentas de terceiros
 
-Estas são as empresas que participam do funcionamento do site. Cada uma tem a sua própria política de privacidade, que vale para o que ela trata, e algumas guardam dados fora do Brasil.
+Estas são as empresas que recebem dados de quem visita o site ou usa o formulário. Cada uma tem a sua própria política de privacidade, que vale para o que ela trata, e algumas guardam dados fora do Brasil.
 
 | Ferramenta | Para que uso | O que pode receber | Política |
 | --- | --- | --- | --- |
 | **Netlify** (EUA) | Hospedagem do site e recebimento do formulário | Registros técnicos de acesso (endereço IP, navegador, páginas visitadas) e os dados do formulário | [netlify.com/privacy](https://www.netlify.com/privacy/) |
 | **Google Fonts** (EUA) | Fontes do site (Bricolage Grotesque, JetBrains Mono e Source Serif 4) | Endereço IP e dados técnicos do navegador, ao carregar as fontes | [policies.google.com/privacy](https://policies.google.com/privacy) e [perguntas sobre privacidade do Google Fonts](https://developers.google.com/fonts/faq/privacy) |
 | **Proton Mail** (Suíça) | E-mail em que recebo as mensagens do formulário e respondo aos contatos | O conteúdo das mensagens | [proton.me/legal/privacy](https://proton.me/legal/privacy) |
-| **GitHub** (EUA) | Guarda o código e os textos do site | Nenhum dado de visitantes. Os textos publicados no site são públicos lá também | [docs.github.com/pt/site-policy/privacy-policies](https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement) |
-
-A área administrativa do site (`/admin`), usada só por mim para publicar, também carrega o Decap CMS a partir do serviço unpkg e faz login pelo GitHub. Visitantes não passam por ela.
 
 ## Redes sociais e links externos
 
