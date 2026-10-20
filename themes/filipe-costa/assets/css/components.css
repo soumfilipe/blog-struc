@@ -128,13 +128,25 @@
   grid-auto-flow: dense;
 }
 .mosaic--hero > .tile--lg { grid-column: 3 / -1; grid-row: span 2; }
+/* De 2 a 4 cards: destaque à esquerda, os demais empilhados à direita */
+.mosaic--feature {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 16rem;
+  grid-auto-flow: dense;
+}
+.mosaic--feature > .tile--lg { grid-column: 1 / span 2; }
+.mosaic--rows-2 > .tile--lg { grid-row: span 2; }
+.mosaic--rows-3 { grid-auto-rows: 14rem; }
+.mosaic--rows-3 > .tile--lg { grid-row: span 3; }
+/* Dois cards lado a lado (navegação entre posts) */
+.mosaic--pair { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 15rem; }
 @media (max-width: 56rem) {
-  .mosaic--hero { grid-template-columns: repeat(2, 1fr); }
-  .mosaic--hero > .tile--lg { grid-column: 1 / -1; grid-row: span 2; }
+  .mosaic--hero, .mosaic--feature { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 17rem; }
+  .mosaic--hero > .tile--lg, .mosaic--feature > .tile--lg { grid-column: 1 / -1; grid-row: span 2; }
 }
 @media (max-width: 40rem) {
-  .mosaic, .mosaic--hero { grid-template-columns: 1fr; grid-auto-rows: 16rem; }
-  .mosaic--hero > .tile--lg { grid-row: span 2; }
+  .mosaic, .mosaic--hero, .mosaic--feature, .mosaic--pair { grid-template-columns: 1fr; grid-auto-rows: 16rem; }
+  .mosaic--hero > .tile--lg, .mosaic--feature > .tile--lg { grid-row: span 2; }
 }
 
 .tile {
@@ -187,6 +199,14 @@
 .tile__title a:focus-visible { outline: none; }
 .tile:has(.tile__title a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 3px; }
 .tile__summary { margin: 0; color: var(--neutral-200); max-width: 36rem; }
+.tile:not(.tile--lg) .tile__summary { font-size: .9375rem; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+/* Ícone de serviço ou seção no canto superior */
+.tile__icon { position: absolute; top: var(--space-6); left: var(--space-6); color: var(--brand-300); }
+.tile--lg .tile__icon { top: clamp(1.5rem, 4vw, 2.5rem); left: clamp(1.5rem, 4vw, 2.5rem); }
+/* Situação da oferta: só "disponível" leva o roxo cheio */
+.tile__tag--em-breve,
+.tile__tag--em-atualizacao { background: rgb(11 10 16 / .55); color: var(--mist-50); box-shadow: inset 0 0 0 1px rgb(244 241 250 / .6); }
+.tile__tag--disponivel { background: var(--green-300); }
 .tile__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); width: 100%; }
 .tile .label { color: var(--neutral-200); }
 .tile__arrow {
@@ -289,14 +309,7 @@
 }
 
 /* ---------- Navegação entre posts ---------- */
-.post-nav {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-  gap: var(--space-4);
-  margin-top: var(--space-12);
-}
-.post-nav .card__title { font-size: 1.25rem; }
-.post-nav .card--next { text-align: right; align-items: flex-end; }
+.post-nav { margin-top: var(--space-12); }
 
 /* ---------- Campo de formulário ---------- */
 .field { display: grid; gap: var(--space-2); }
@@ -397,8 +410,6 @@
 /* ---------- Página inicial ---------- */
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
 
-.door .icon { color: var(--accent); }
-.door.card--accent .icon { color: var(--on-accent); }
 
 .audience {
   display: grid;
@@ -435,7 +446,6 @@
 
 /* ---------- Ofertas (consultoria e treinamentos) ---------- */
 .offer-grid { margin-top: var(--space-8); }
-.offer-card__top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); min-height: 2rem; }
 
 .badge {
   display: inline-flex;

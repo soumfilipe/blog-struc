@@ -1,22 +1,5 @@
-{{- /* Card de post com capa e título sobre a imagem. (dict "page" $p "large" true "variant" 0); "large" marca o destaque do mosaico e "variant" escolhe a capa automática. */ -}}
+{{- /* Card de post. (dict "page" $p "large" true "variant" 0 "tag" "…"); "tag" troca a etiqueta da categoria. */ -}}
 {{- $p := .page -}}
-<article class="tile{{ if .large }} tile--lg{{ end }}">
-  <div class="tile__media">
-    {{ partial "cover.html" (dict "page" $p "variant" .variant "sizes" (cond .large "(max-width: 56rem) 100vw, 36rem" "(max-width: 40rem) 100vw, (max-width: 56rem) 50vw, 18rem")) }}
-  </div>
-  <div class="tile__body">
-    {{- with $p.Params.categories }}
-    <span class="tile__tag">{{ index . 0 }}</span>
-    {{- end }}
-    <h3 class="tile__title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
-    {{- if .large }}
-    {{- with partial "description.html" $p }}
-    <p class="tile__summary">{{ . | truncate 180 }}</p>
-    {{- end }}
-    {{- end }}
-    <div class="tile__foot">
-      <span class="label"><time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date | time.Format (cond .large ":date_medium" ":date_short") }}</time> · {{ $p.ReadingTime }} min</span>
-      <span class="tile__arrow">{{ partial "icon.html" (dict "name" "seguir" "class" "icon--16") }}</span>
-    </div>
-  </div>
-</article>
+{{- $tag := .tag | default (index ($p.Params.categories | default (slice "")) 0) -}}
+{{- $meta := printf `<time datetime="%s">%s</time> · %d min` ($p.Date.Format "2006-01-02") ($p.Date | time.Format (cond .large ":date_medium" ":date_short")) $p.ReadingTime -}}
+{{ partial "tile.html" (dict "page" $p "large" .large "variant" .variant "tag" $tag "summary" (partial "description.html" $p) "meta" $meta "level" .level) }}

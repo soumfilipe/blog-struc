@@ -1,11 +1,13 @@
 {{- /*
-  Mosaico de posts. (dict "pages" $pages "hero" true)
-  Com "hero" e pelo menos cinco posts, o primeiro vira o destaque grande à direita
-  e os quatro seguintes ficam em grade 2×2 ao lado. Os demais seguem em grade.
+  Mosaico de cards. (dict "pages" $pages "hero" true "kind" "offer" "level" 2)
+  "kind": "post" (padrão) ou "offer" (serviços e cursos). Layout em mosaic-class.html.
 */ -}}
-{{- $hero := and .hero (ge (len .pages) 5) -}}
-<div class="mosaic{{ if $hero }} mosaic--hero{{ end }}">
+{{- $n := len .pages -}}
+{{- $class := partial "mosaic-class.html" (dict "n" $n "hero" .hero) -}}
+{{- $large := ne $class "mosaic" -}}
+{{- $tile := cond (eq .kind "offer") "offer-tile.html" "post-tile.html" -}}
+<div class="{{ $class }}">
   {{- range $i, $p := .pages }}
-  {{ partial "post-tile.html" (dict "page" $p "variant" $i "large" (and $hero (eq $i 0))) }}
+  {{ partial $tile (dict "page" $p "variant" $i "large" (and $large (eq $i 0)) "level" $.level) }}
   {{- end }}
 </div>

@@ -32,17 +32,12 @@
   <div class="section__head">
     <h2 id="portas" class="h2">{{ $home.portasTitulo | default "Como posso ajudar" }}</h2>
   </div>
-  <div class="card-grid">
+  {{- /* A porta marcada como destaque vira o card grande */}}
+  {{- $nomes := dict "posts" "textos" "consultoria" "serviços" "treinamentos" "cursos" }}
+  <div class="{{ partial "mosaic-class.html" (dict "n" (len .) "hero" true) }}">
     {{- range $i, $porta := . }}
     {{- with site.GetPage $porta.pagina }}
-    <article class="card door{{ if $porta.destaque }} card--accent{{ end }}">
-      {{ with $porta.icone }}{{ partial "icon.html" (dict "name" . "class" "icon--32") }}{{ end }}
-      <span class="label">{{ printf "%02d" (add $i 1) }} / {{ $porta.rotulo | default (lower .Title) }}</span>
-      <h3 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      {{- with partial "description.html" . }}
-      <p class="card__summary">{{ . }}</p>
-      {{- end }}
-    </article>
+    {{ partial "tile.html" (dict "page" . "large" $porta.destaque "variant" $i "icon" $porta.icone "tag" (printf "%02d / %s" (add $i 1) ($porta.rotulo | default (lower .Title))) "summary" (partial "description.html" .) "showSummary" true "meta" (printf "%d %s" (len .RegularPages) (index $nomes .Section | default "itens"))) }}
     {{- end }}
     {{- end }}
   </div>
