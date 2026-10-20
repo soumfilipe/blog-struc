@@ -37,7 +37,7 @@ hugo server --themesDir ../..
 | `author` | Nome no rodapé e na assinatura dos posts |
 | `description` | Descrição padrão do site (meta e Open Graph) |
 | `wordmark` | Texto do logo. Padrão: `filipe costa` |
-| `tagline` | Rótulo mono do rodapé. Padrão: `programador · designer · processos` |
+| `tagline` | Rótulo mono do rodapé. Padrão: `programador - designer - processos` |
 | `mainSections` | Seções cujos posts aparecem na página inicial. Vazio = todas as páginas |
 | `homePosts` | Quantos posts na página inicial. Padrão: 7 |
 | `archive` | Link do botão "ver todos" na página inicial |
