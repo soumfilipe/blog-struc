@@ -58,7 +58,7 @@ enableRobotsTXT = true
 
   # Faixa de chamada no fim das páginas
   [params.ctaBand]
-    label = "primeira conversa sem custo"
+    label = ""
     title = "Qual problema a sua equipe quer resolver?"
     text = "Conte o contexto e eu digo, com franqueza, se e como posso ajudar."
     button = "vamos conversar"
