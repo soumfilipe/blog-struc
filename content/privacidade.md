@@ -25,7 +25,7 @@ Quando você envia o formulário, eu recebo os dados que você preencher: nome, 
 
 ## O que fica no seu navegador
 
-O site guarda uma única informação no seu próprio navegador: se você prefere o tema claro ou o escuro, quando usa o botão de sol e lua do cabeçalho. Essa preferência fica só no seu aparelho, não é enviada a mim nem a ninguém, e você pode apagá-la limpando os dados do site no navegador. Não há outros cookies ou armazenamentos. As fontes tipográficas também são servidas pelo próprio site, sem passar por serviços externos.
+O site guarda uma única informação no seu próprio navegador: se você prefere o tema claro ou o escuro, quando usa o botão de sol e lua do cabeçalho. Essa preferência fica só no seu aparelho, não é enviada a mim nem a ninguém, e você pode apagá-la limpando os dados do site no navegador. Não há outros cookies ou armazenamentos.
 
 ## Ferramentas de terceiros
 
