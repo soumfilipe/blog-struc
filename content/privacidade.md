@@ -36,13 +36,9 @@ Estas são as empresas que recebem dados de quem visita o site ou usa o formulá
 | **Netlify** (EUA) | Hospedagem do site e recebimento do formulário | Registros técnicos de acesso (endereço IP, navegador, páginas visitadas) e os dados do formulário | [netlify.com/privacy](https://www.netlify.com/privacy/) |
 | **Proton Mail** (Suíça) | E-mail em que recebo as mensagens do formulário e respondo aos contatos | O conteúdo das mensagens | [proton.me/legal/privacy](https://proton.me/legal/privacy) |
 
-## Redes sociais e links externos
+## Links externos
 
-Os textos novos são divulgados automaticamente no Mastodon e no Bluesky, e o rodapé tem um link para o LinkedIn. O site não carrega botões, vídeos ou outros conteúdos dessas redes, então elas não recebem nada da sua visita aqui. Se você clicar em um link e for até elas, passa a valer a política de privacidade de cada uma:
-
-- [Mastodon](https://mastodon.social/privacy-policy) (a política depende da instância)
-- [Bluesky](https://bsky.social/about/support/privacy-policy)
-- [LinkedIn](https://br.linkedin.com/legal/privacy-policy)
+O site tem links para outros sites. Ao segui-los, você passa a valer a política de privacidade de cada um deles.
 
 ## Seus direitos
 
