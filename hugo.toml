@@ -17,14 +17,14 @@ enableRobotsTXT = true
 
 [params]
   author = "Filipe Costa"
-  description = "Consultoria e formação em processos, design e agilidade para o setor público, ONGs e movimentos sociais."
+  description = "Consultoria e formação em processos, design e agilidade."
   mainSections = ["posts"]
   archive = "/posts/"
   homePosts = 5
 
   # Rascunho de posicionamento: revisar antes de publicar
   [params.hero]
-    label = "consultoria e formação · setor público, ONGs e movimentos"
+    label = "consultoria e formação"
     title = "Processos a serviço de quem"
     highlight = "trabalha"
     end = "."
