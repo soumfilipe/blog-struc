@@ -25,7 +25,7 @@ Quando você envia o formulário, eu recebo os dados que você preencher: nome, 
 
 ## O que fica no seu navegador
 
-O site guarda uma única informação no seu próprio navegador: se você prefere o tema claro ou o escuro, quando usa o botão de sol e lua do cabeçalho. Essa preferência fica só no seu aparelho, não é enviada a mim nem a ninguém, e você pode apagá-la limpando os dados do site no navegador. Não há outros cookies ou armazenamentos.
+O site guarda uma única informação no seu próprio navegador: se você prefere o tema claro ou o escuro, quando usa o botão de sol e lua do cabeçalho. Essa preferência fica só no seu aparelho, não é enviada a mim nem a ninguém, e você pode apagá-la limpando os dados do site no navegador. Não há outros cookies ou armazenamentos. As fontes tipográficas também são servidas pelo próprio site, sem passar por serviços externos.
 
 ## Ferramentas de terceiros
 
@@ -34,7 +34,6 @@ Estas são as empresas que recebem dados de quem visita o site ou usa o formulá
 | Ferramenta | Para que uso | O que pode receber | Política |
 | --- | --- | --- | --- |
 | **Netlify** (EUA) | Hospedagem do site e recebimento do formulário | Registros técnicos de acesso (endereço IP, navegador, páginas visitadas) e os dados do formulário | [netlify.com/privacy](https://www.netlify.com/privacy/) |
-| **Google Fonts** (EUA) | Fontes do site (Bricolage Grotesque, JetBrains Mono e Source Serif 4) | Endereço IP e dados técnicos do navegador, ao carregar as fontes | [policies.google.com/privacy](https://policies.google.com/privacy) e [perguntas sobre privacidade do Google Fonts](https://developers.google.com/fonts/faq/privacy) |
 | **Proton Mail** (Suíça) | E-mail em que recebo as mensagens do formulário e respondo aos contatos | O conteúdo das mensagens | [proton.me/legal/privacy](https://proton.me/legal/privacy) |
 
 ## Redes sociais e links externos

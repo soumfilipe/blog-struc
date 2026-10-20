@@ -4,3 +4,10 @@
 
 [build.environment]
   HUGO_VERSION = "0.139.0"
+
+# Fontes hospedadas no site: cache longo (os arquivos só mudam com nome novo)
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
