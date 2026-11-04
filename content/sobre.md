@@ -2,7 +2,7 @@
 title: "Sobre Filipe Costa"
 destaque: "Filipe Costa"
 layout: sobre
-rotulo: "sobre"
+rotulo: ""
 subtitulo: "Quinze anos entre código, processos e pessoas. Hoje ajudo equipes a se organizar e trabalhar de forma mais fluida."
 description: "Trajetória, formações e a visão de mundo por trás do trabalho de Filipe Costa."
 ---

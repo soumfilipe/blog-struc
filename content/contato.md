@@ -2,7 +2,7 @@
 title: "Vamos conversar"
 destaque: "conversar"
 layout: contato
-rotulo: "contato"
+rotulo: ""
 description: "Conte o contexto da sua organização e o que vocês precisam resolver. Respondo pessoalmente."
 ---
 

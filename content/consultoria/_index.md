@@ -1,7 +1,7 @@
 ---
 title: "Consultoria"
 destaque: "Consultoria"
-rotulo: "consultoria"
+rotulo: ""
 description: "Processos, serviços e equipes organizados para durar no setor público, em ONGs e em movimentos sociais."
 cascade:
   type: oferta

@@ -1,6 +1,7 @@
 public/
 resources/
 node_modules/
+brand/redes-sociais/png/
 .hugo_build.lock
 .DS_Store
 .obsidian

@@ -1,7 +1,7 @@
 ---
 title: "Treinamentos"
 destaque: "Treinamentos"
-rotulo: "treinamentos"
+rotulo: ""
 description: "Formações práticas, em turma fechada para a sua organização ou em turmas abertas."
 cascade:
   type: oferta
