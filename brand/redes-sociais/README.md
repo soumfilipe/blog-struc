@@ -6,7 +6,7 @@ O rodapé com o wordmark já vem na imagem; o resto fica livre para o título e 
 
 Esta pasta não é publicada no site: o Hugo não lê `brand/`.
 
-## Formatos (`png/<formato>-<variante>.png`)
+## Formatos (`png/<formato>-<variante>.png`, 50 imagens)
 
 | Formato | Tamanho | Uso |
 | --- | --- | --- |
@@ -26,6 +26,17 @@ Esta pasta não é publicada no site: o Hugo não lê `brand/`.
 | `pontos` | Escuro, grade de pontos | Qualquer área; a grade some perto do rodapé |
 | `destaque` | Roxo pastel com texto Noite | Card de destaque: no máximo um por sequência de posts |
 | `nevoa` | Claro | Texto em Noite e acento em Profundo, nunca em roxo pastel |
+
+### Brutalistas
+
+Concreto aparente sobre Noite (a paleta Concreto só aparece em ilustrações e texturas, sempre sobre Noite), arestas duras, sombras sem desfoque e estrutura à mostra. Cada uma tem um único elemento em roxo pastel. O desenho fica em `brutalismo.mjs`.
+
+| Variante | Elemento | Onde o texto fica melhor |
+| --- | --- | --- |
+| `laje` | Concreto de fôrma de tábuas com furos de tirante e viga roxa na aresta | Na área de Noite, abaixo da laje (à esquerda nos formatos deitados) |
+| `grelha` | Estrutura modular exposta, eixos em mono (A1, B1…), módulos de concreto e um roxo | Nos módulos vazios à esquerda e embaixo |
+| `bloco` | Volumes de concreto em balanço com sombra dura e rasgo de janela roxo | Coluna da esquerda e metade de baixo |
+| `brise` | Brise-soleil vertical com luz roxa entre as lâminas | Abaixo da viga (à esquerda nos formatos deitados) |
 
 Regras da marca para o texto por cima: títulos em Bricolage Grotesque, uma única palavra em roxo por título (no escuro `#B994FF`, no claro `#5B3FD1`, no `destaque` sublinhado ou em Noite), rótulos em JetBrains Mono maiúsculo.
 

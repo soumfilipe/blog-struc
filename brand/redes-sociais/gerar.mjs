@@ -3,6 +3,7 @@
 // Uso, na primeira vez:  cd brand/redes-sociais && npm install
 // Depois:                npm run gerar   (ou node brand/redes-sociais/gerar.mjs)
 import { createRequire } from 'node:module';
+import { brutalistas } from './brutalismo.mjs';
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -54,6 +55,10 @@ const variantes = {
     linear-gradient(160deg, #FFFFFF, #F4F1FA 60%)` },
 };
 
+// Variantes brutalistas (brutalismo.mjs): concreto aparente sobre Noite.
+for (const [nome, arte] of Object.entries(brutalistas))
+  variantes[nome] = { tema: 'escuro', brutal: true, arte, bg: () => '#0B0A10' };
+
 // Cores do wordmark por tema. No claro o acento é Profundo, nunca o pastel.
 const cores = {
   escuro: { texto: '#F4F1FA', cursor: '#B994FF', borda: 'rgb(244 241 250 / .14)' },
@@ -76,11 +81,13 @@ html, body { margin: 0; width: ${f.w}px; height: ${f.h}px; overflow: hidden; }
   mask-image: linear-gradient(to top, transparent ${f.safeBottom + f.pad + fs * 2.5}px, #000 ${f.safeBottom + f.pad + fs * 7}px); }
 .marca { position: absolute; left: ${f.pad}px; right: ${f.pad}px; bottom: ${f.pad + f.safeBottom}px;
   display: flex; align-items: center; justify-content: space-between;
-  padding-top: ${Math.round(fs * 0.7)}px; border-top: 2px solid ${c.borda}; }
+  padding-top: ${Math.round(fs * 0.7)}px; border-top: ${v.brutal ? `${Math.round(fs * 0.14)}px solid #3A3835` : `2px solid ${c.borda}`}; }
+.arte { position: absolute; inset: 0; }
+.arte svg { display: block; }
 .logo { font: 800 ${fs}px/1 'Bricolage Grotesque'; letter-spacing: -.04em; color: ${c.texto}; display: flex; align-items: center; }
 .cursor { display: inline-block; width: .3em; height: .82em; margin-left: .06em; background: ${c.cursor}; }
 .url { font: 400 ${Math.round(fs * 0.5)}px/1 'JetBrains Mono'; letter-spacing: .04em; text-transform: uppercase; color: ${c.texto}; opacity: .75; }
-</style></head><body><div class="bg"></div><div class="trama"></div>
+</style></head><body><div class="bg"></div><div class="trama"></div>${v.arte ? `<div class="arte">${v.arte(f.w, f.h, f.h - f.pad - f.safeBottom - Math.round(fs * 2.6))}</div>` : ''}
 <div class="marca"><span class="logo">filipe costa<span class="cursor"></span></span><span class="url">filipecosta.eti.br</span></div>
 </body></html>`;
 };
