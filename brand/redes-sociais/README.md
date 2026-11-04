@@ -31,8 +31,17 @@ Regras da marca para o texto por cima: títulos em Bricolage Grotesque, uma úni
 
 ## Gerar de novo
 
+Na primeira vez, instale o Playwright e o Chromium que ele usa (cerca de 150 MB, só nesta pasta):
+
 ```sh
-node brand/redes-sociais/gerar.mjs
+cd brand/redes-sociais
+npm install
 ```
 
-Precisa do Playwright com Chromium. Formatos e variantes ficam no começo do script.
+Depois, de dentro da pasta:
+
+```sh
+npm run gerar
+```
+
+Ou, da raiz do repositório, `node brand/redes-sociais/gerar.mjs`. Formatos e variantes ficam no começo do script.
