@@ -1,7 +1,7 @@
 // Gera as imagens de fundo para posts nas redes sociais com as cores,
 // texturas e o wordmark do brandbook (mesmas capas automáticas do site).
-// Uso, a partir da raiz do repositório:  node brand/redes-sociais/gerar.mjs
-// Requer o Playwright com Chromium (npm i -D playwright && npx playwright install chromium).
+// Uso, na primeira vez:  cd brand/redes-sociais && npm install
+// Depois:                npm run gerar   (ou node brand/redes-sociais/gerar.mjs)
 import { createRequire } from 'node:module';
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -11,7 +11,13 @@ const here = dirname(fileURLToPath(import.meta.url));
 const fonts = pathToFileURL(join(here, '../../themes/filipe-costa/static/fonts/')).href;
 const out = join(here, 'png');
 mkdirSync(out, { recursive: true });
-const { chromium } = createRequire(import.meta.url)('playwright');
+let chromium;
+try {
+  ({ chromium } = createRequire(import.meta.url)('playwright'));
+} catch {
+  console.error('Playwright não encontrado. Rode antes:\n  cd brand/redes-sociais && npm install');
+  process.exit(1);
+}
 
 // Formatos. "safe" = margem livre de interface do app (stories: topo e base).
 const formatos = {
