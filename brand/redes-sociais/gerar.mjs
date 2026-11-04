@@ -4,6 +4,7 @@
 // Depois:                npm run gerar   (ou node brand/redes-sociais/gerar.mjs)
 import { createRequire } from 'node:module';
 import { brutalistas } from './brutalismo.mjs';
+import { formas } from './formas.mjs';
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -58,6 +59,10 @@ const variantes = {
 // Variantes brutalistas (brutalismo.mjs): concreto aparente sobre Noite.
 for (const [nome, arte] of Object.entries(brutalistas))
   variantes[nome] = { tema: 'escuro', brutal: true, arte, bg: () => '#0B0A10' };
+
+// Variantes só de formas (formas.mjs): cores chapadas e área negativa.
+for (const [nome, arte] of Object.entries(formas))
+  variantes[nome] = { tema: 'escuro', arte, bg: () => '#0B0A10' };
 
 // Cores do wordmark por tema. No claro o acento é Profundo, nunca o pastel.
 const cores = {

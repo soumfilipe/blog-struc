@@ -6,7 +6,7 @@ O rodapé com o wordmark já vem na imagem; o resto fica livre para o título e 
 
 Esta pasta não é publicada no site: o Hugo não lê `brand/`.
 
-## Formatos (`png/<formato>-<variante>.png`, 50 imagens)
+## Formatos (`png/<formato>-<variante>.png`, 70 imagens)
 
 | Formato | Tamanho | Uso |
 | --- | --- | --- |
@@ -56,3 +56,14 @@ npm run gerar
 ```
 
 Ou, da raiz do repositório, `node brand/redes-sociais/gerar.mjs`. Formatos e variantes ficam no começo do script.
+
+### Só formas
+
+Formas chapadas em Profundo e roxo pastel sobre Noite, sem textura, degradê nem sombra. O vazio desenha a forma e é onde entra o texto. O desenho fica em `formas.mjs`.
+
+| Variante | Forma | Onde o texto fica melhor |
+| --- | --- | --- |
+| `vao` | Viga e dois pilares em Profundo, faixa roxa sob a viga | No vão livre entre os pilares |
+| `escada` | Massa em degraus pendurada no topo, último degrau roxo | No vazio em escada, à esquerda |
+| `arco` | Laje roxa com um arco vazado | Abaixo da laje e dentro do arco |
+| `encaixe` | L roxo e quadrado Profundo separados por uma junta de Noite | Coluna da esquerda e metade de baixo |
