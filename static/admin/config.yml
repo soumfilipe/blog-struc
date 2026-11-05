@@ -2,7 +2,9 @@ backend:
   name: github
   repo: soumfilipe/blog-struc
   branch: v5
-  # site_domain: filipecosta.eti.br    # <- descomente se o login falhar no domínio próprio
+  # Login pelo Worker da Cloudflare (worker/index.js), no próprio site
+  base_url: https://filipecosta.eti.br
+  auth_endpoint: api/auth
 
 locale: pt
 media_folder: static/uploads

@@ -1,0 +1,30 @@
+# Site na Cloudflare (Worker com arquivos estáticos). O deploy é feito pelo
+# GitHub Actions (.github/workflows/publicar.yml): o Hugo gera public/ e o
+# wrangler envia. Segredos (não ficam aqui): GITHUB_CLIENT_ID e GITHUB_CLIENT_SECRET,
+# cadastrados com `wrangler secret put` ou no painel da Cloudflare.
+name = "filipecosta"
+main = "worker/index.js"
+compatibility_date = "2026-10-01"
+
+# Domínio próprio: a zona filipecosta.eti.br precisa já estar na conta da Cloudflare.
+routes = [
+  { pattern = "filipecosta.eti.br", custom_domain = true },
+]
+
+[assets]
+directory = "public"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"
+run_worker_first = ["/api/*"]
+
+# Envio das mensagens do formulário. Só pode mandar para este endereço, que
+# precisa estar verificado em Email Routing → Destination addresses.
+[[send_email]]
+name = "EMAIL"
+destination_address = "ola@filipecosta.eti.br"
+
+[vars]
+FORM_TO = "ola@filipecosta.eti.br"
+# Remetente: precisa ser de um domínio com envio de e-mail ativo na Cloudflare (ver README).
+FORM_FROM = "formulario@filipecosta.eti.br"

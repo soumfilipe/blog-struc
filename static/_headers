@@ -1,0 +1,6 @@
+# Cabeçalhos lidos pela Cloudflare (substitui o que ficava no netlify.toml)
+
+# Fontes hospedadas no site: cache longo (os arquivos só mudam com nome novo)
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
