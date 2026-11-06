@@ -3,7 +3,7 @@ title: "Política de privacidade"
 destaque: "privacidade"
 pagina: true
 description: "Quais dados este site trata, para quê, e quais ferramentas de terceiros participam do seu funcionamento."
-subtitulo: "Última atualização: 20 de outubro de 2026."
+subtitulo: "Última atualização: 5 de novembro de 2026."
 ---
 
 Este site não coleta dados para publicidade, não usa ferramentas de análise de visitas e não tem cookies de rastreamento. O único dado pessoal que eu recebo é o que você escreve no formulário de contato, e ele serve só para responder a você.
@@ -20,7 +20,7 @@ Quando você envia o formulário, eu recebo os dados que você preencher: nome, 
 
 - **Para quê:** responder ao seu contato e, se for o caso, conversar sobre uma proposta de trabalho. Os dados não são usados para enviar newsletter, propaganda ou qualquer outra coisa.
 - **Base legal:** o seu consentimento, dado ao marcar a caixa de concordância antes de enviar (art. 7º, I, da LGPD).
-- **Onde ficam:** o envio é recebido e guardado pelo Netlify, que hospeda o site, e uma cópia chega por e-mail na minha caixa do Proton Mail. Os dados não são vendidos nem repassados a ninguém.
+- **Onde ficam:** o envio passa pela Cloudflare, que hospeda o site, e chega por e-mail na minha caixa do Proton Mail, onde fica guardado. Os dados não são vendidos nem repassados a ninguém.
 - **Por quanto tempo:** pelo tempo necessário para responder e manter a conversa, ou até você pedir a exclusão.
 
 ## O que fica no seu navegador
@@ -33,7 +33,7 @@ Estas são as empresas que recebem dados de quem visita o site ou usa o formulá
 
 | Ferramenta | Para que uso | O que pode receber | Política |
 | --- | --- | --- | --- |
-| **Netlify** (EUA) | Hospedagem do site e recebimento do formulário | Registros técnicos de acesso (endereço IP, navegador, páginas visitadas) e os dados do formulário | [netlify.com/privacy](https://www.netlify.com/privacy/) |
+| **Cloudflare** (EUA) | Hospedagem do site e envio das mensagens do formulário para o meu e-mail | Registros técnicos de acesso (endereço IP, navegador, páginas visitadas) e os dados do formulário, no caminho até o meu e-mail | [cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/) |
 | **Proton Mail** (Suíça) | E-mail em que recebo as mensagens do formulário e respondo aos contatos | O conteúdo das mensagens | [proton.me/legal/privacy](https://proton.me/legal/privacy) |
 
 ## Links externos

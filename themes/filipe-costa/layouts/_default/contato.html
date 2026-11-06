@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- /* Página de contato com formulário do Netlify Forms (precisa de "Form detection" ligado no Netlify) */}}
+{{- /* Página de contato. O formulário é recebido pelo Worker da Cloudflare (worker/index.js), que manda a mensagem por e-mail. */}}
 <article class="container">
   <header class="post-head">
     <p class="label label--accent">{{ .Params.rotulo | default "contato" }}</p>
@@ -10,8 +10,7 @@
   </header>
 
   <div class="contact">
-    <form class="form" name="contato" method="POST" action="{{ .Params.obrigado | default "/contato/obrigado/" | relURL }}" data-netlify="true" netlify-honeypot="empresa-site">
-      <input type="hidden" name="form-name" value="contato">
+    <form class="form" name="contato" method="POST" action="/api/contato">
       <p class="visually-hidden" aria-hidden="true">
         <label>Não preencha este campo: <input name="empresa-site" tabindex="-1" autocomplete="off"></label>
       </p>
