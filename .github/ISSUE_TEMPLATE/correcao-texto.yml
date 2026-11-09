@@ -1,0 +1,29 @@
+name: Correção em um texto
+description: Erro de digitação, gramática, informação desatualizada ou link quebrado num texto.
+labels: ["texto"]
+body:
+  - type: markdown
+    attributes:
+      value: Para discutir as ideias de um texto, prefira o Mastodon ou o e-mail. Aqui entram correções.
+  - type: input
+    id: endereco
+    attributes:
+      label: Endereço do texto
+      placeholder: https://filipecosta.eti.br/posts/...
+    validations:
+      required: true
+  - type: textarea
+    id: trecho
+    attributes:
+      label: Trecho com o problema
+      description: Copie a frase ou o parágrafo.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: correcao
+    attributes:
+      label: Correção sugerida
+      description: Se for uma informação desatualizada, inclua a fonte.
+    validations:
+      required: true
