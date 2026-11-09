@@ -5,7 +5,7 @@ name: Publicar
 # posts novos no Mastodon e no Bluesky.
 on:
   push:
-    branches: [v5]   # branch principal deste repositório
+    branches: [principal]   # branch principal deste repositório
     paths-ignore:
       - "README.md"
       - "CLAUDE.md"
