@@ -21,7 +21,8 @@ collections:
     sortable_fields: [date, title]
     fields:
       - { label: Título, name: title, widget: string }
-      - { label: Palavra em destaque (aparece em roxo no título), name: destaque, widget: string, required: false }
+      - { label: Palavra em destaque (uma palavra do título, aparece em roxo), name: destaque, widget: string, required: false }
+      - { label: Subtítulo (linha de apoio abaixo do título), name: subtitulo, widget: string, required: false }
       - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
       - { label: Resumo (usado no post das redes), name: summary, widget: text, required: false }
       - { label: Imagem de capa (opcional; sem ela o site desenha uma capa com as cores da marca), name: imagem, widget: image, required: false }
