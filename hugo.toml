@@ -39,7 +39,7 @@ enableRobotsTXT = true
   # Botão em pílula do cabeçalho: leva ao site de consultoria
   [params.cta]
     label = "consultoria"
-    url = "https://consultoria.filipecosta.eti.br/"
+    url = "https://trabalho.filipecosta.eti.br/"
 
   # A página inicial do blog não mostra "Onde já atuei" (fica no site de consultoria)
   [params.home]
@@ -51,7 +51,7 @@ enableRobotsTXT = true
     title = "Processos a serviço de quem trabalha."
     text = "Consultoria e treinamentos em processos, design e agilidade para o setor público, ONGs e movimentos sociais."
     button = "conheça"
-    url = "https://consultoria.filipecosta.eti.br/"
+    url = "https://trabalho.filipecosta.eti.br/"
 
   [[params.social]]
     name = "LinkedIn"

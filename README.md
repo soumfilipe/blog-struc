@@ -5,7 +5,7 @@ Markdown + Hugo + Decap CMS + divulgação automática.
 São dois sites no mesmo repositório, com o mesmo tema:
 
 - **Blog** em `https://filipecosta.eti.br`: textos, Sobre e política de privacidade. É o site principal, na raiz do repositório.
-- **Consultoria** em `https://consultoria.filipecosta.eti.br`: serviços, treinamentos e o formulário de contato. Fica na pasta `consultoria/`.
+- **Consultoria** em `https://trabalho.filipecosta.eti.br`: serviços, treinamentos e o formulário de contato. Fica na pasta `trabalho/`.
 
 Os endereços antigos `/consultoria/`, `/treinamentos/` e `/contato/` do domínio principal redirecionam para o subdomínio (`static/_redirects`).
 
@@ -28,11 +28,11 @@ static/_redirects       redirecionamentos dos endereços antigos para o subdomí
 hugo.toml               configuração do blog
 wrangler.toml           Worker do blog (domínio, e-mail, arquivos estáticos)
 
-consultoria/hugo.toml                configuração do site de consultoria
-consultoria/wrangler.toml            Worker do site de consultoria
-consultoria/content/servicos/        serviços de consultoria (um arquivo por serviço)
-consultoria/content/treinamentos/    cursos (um arquivo por curso; status: disponivel, em-atualizacao ou em-breve)
-consultoria/content/contato.md       página de contato com formulário (recebido pelo Worker)
+trabalho/hugo.toml                   configuração do site de consultoria
+trabalho/wrangler.toml               Worker do site de consultoria
+trabalho/content/servicos/           serviços de consultoria (um arquivo por serviço)
+trabalho/content/treinamentos/       cursos (um arquivo por curso; status: disponivel, em-atualizacao ou em-breve)
+trabalho/content/contato.md          página de contato com formulário (recebido pelo Worker)
 
 themes/filipe-costa/    tema com a identidade visual (ver o README do tema)
 worker/index.js         código dos dois Workers: formulário de contato e login do Decap
@@ -58,7 +58,7 @@ A ordem importa: o site antigo no Netlify continua no ar até o passo 5.
 7. **Netlify:** exporte as mensagens antigas do formulário (Forms → contato), apague-as lá e exclua o site do Netlify.
 8. Acesse `https://filipecosta.eti.br/admin/`, faça login e adicione à tela inicial do celular.
 
-**Subdomínio de consultoria:** o Worker `filipecosta-consultoria` e o endereço `consultoria.filipecosta.eti.br` são criados pelo próprio workflow no primeiro deploy (o token "Edit Cloudflare Workers" já permite). Ele usa o mesmo envio de e-mail do blog, sem configuração extra.
+**Subdomínio de consultoria:** o Worker `filipecosta-trabalho` e o endereço `trabalho.filipecosta.eti.br` são criados pelo próprio workflow no primeiro deploy (o token "Edit Cloudflare Workers" já permite). Ele usa o mesmo envio de e-mail do blog, sem configuração extra.
 
 Se o endereço `www.filipecosta.eti.br` for usado, crie na Cloudflare uma Redirect Rule de `www` para o domínio principal.
 
@@ -68,4 +68,4 @@ Se o endereço `www.filipecosta.eti.br` for usado, crie na Cloudflare uma Redire
 
 Crie o post no `/admin`, deixe "Rascunho" desligado e publique. A imagem de capa é opcional: sem ela, o site desenha uma capa com as cores da marca. A Action publica o site, posta nas redes e grava `syndicated: true` no arquivo para não repetir.
 
-Para ver os sites localmente (Hugo 0.128 ou mais novo): `hugo server` para o blog e `hugo server --source consultoria` para o de consultoria.
+Para ver os sites localmente (Hugo 0.128 ou mais novo): `hugo server` para o blog e `hugo server --source trabalho` para o de consultoria.

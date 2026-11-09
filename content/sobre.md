@@ -24,4 +24,4 @@ No trabalho, isso vira método:
 - **Autonomia acima de dependência.** Prefiro soluções abertas, que a organização consiga manter sem ficar presa a um fornecedor, inclusive a mim.
 - **Simples.** Se você explica o processo três vezes, documente. Se documentou e ainda precisa explicar, automatize.
 
-Os serviços de consultoria e os treinamentos estão em [consultoria.filipecosta.eti.br](https://consultoria.filipecosta.eti.br/).
+Os serviços de consultoria e os treinamentos estão em [trabalho.filipecosta.eti.br](https://trabalho.filipecosta.eti.br/).

@@ -37,7 +37,7 @@ collections:
   - name: consultoria
     label: Consultoria (serviços)
     label_singular: Serviço de consultoria
-    folder: consultoria/content/servicos
+    folder: trabalho/content/servicos
     filter: { field: tipo, value: servico }
     create: true
     extension: md
@@ -65,7 +65,7 @@ collections:
   - name: treinamentos
     label: Treinamentos
     label_singular: Treinamento
-    folder: consultoria/content/treinamentos
+    folder: trabalho/content/treinamentos
     filter: { field: tipo, value: curso }
     create: true
     extension: md
@@ -107,7 +107,7 @@ collections:
           - { label: Texto, name: body, widget: markdown }
       - label: Contato (site de consultoria)
         name: contato
-        file: consultoria/content/contato.md
+        file: trabalho/content/contato.md
         fields:
           - { label: Título, name: title, widget: string }
           - { label: Palavra em destaque, name: destaque, widget: string, required: false }

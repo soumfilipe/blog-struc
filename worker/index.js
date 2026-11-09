@@ -1,5 +1,5 @@
 // Worker dos dois sites na Cloudflare: o blog (filipecosta.eti.br, wrangler.toml da
-// raiz) e o de consultoria (consultoria.filipecosta.eti.br, consultoria/wrangler.toml).
+// raiz) e o de consultoria (trabalho.filipecosta.eti.br, trabalho/wrangler.toml).
 // As páginas estáticas (pasta public/, gerada pelo Hugo) são servidas direto pela
 // Cloudflare. Este código só roda nos endereços /api/*:
 //   POST /api/contato         formulário de contato → e-mail para a caixa do Proton

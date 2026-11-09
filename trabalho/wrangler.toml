@@ -1,18 +1,18 @@
-# Worker do site de consultoria (consultoria.filipecosta.eti.br). Usa o mesmo
+# Worker do site de consultoria (trabalho.filipecosta.eti.br). Usa o mesmo
 # código do blog (worker/index.js), mas aqui só o formulário de contato é usado:
 # o login do Decap fica no domínio principal.
-# O deploy é feito pelo GitHub Actions: `wrangler deploy --config consultoria/wrangler.toml`.
-name = "filipecosta-consultoria"
+# O deploy é feito pelo GitHub Actions: `wrangler deploy --config trabalho/wrangler.toml`.
+name = "filipecosta-trabalho"
 main = "../worker/index.js"
 compatibility_date = "2026-10-01"
 
 # O subdomínio é criado pela própria Cloudflare no primeiro deploy (zona filipecosta.eti.br).
 routes = [
-  { pattern = "consultoria.filipecosta.eti.br", custom_domain = true },
+  { pattern = "trabalho.filipecosta.eti.br", custom_domain = true },
 ]
 
 [assets]
-directory = "public"   # consultoria/public, gerado por `hugo --source consultoria`
+directory = "public"   # trabalho/public, gerado por `hugo --source trabalho`
 binding = "ASSETS"
 html_handling = "auto-trailing-slash"
 not_found_handling = "404-page"

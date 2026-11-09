@@ -1,8 +1,8 @@
-# Site de consultoria e treinamentos: https://consultoria.filipecosta.eti.br
+# Site de consultoria e treinamentos: https://trabalho.filipecosta.eti.br
 # Usa o mesmo tema, as mesmas imagens enviadas pelo painel (static/uploads) e os
 # mesmos dados (data/) do blog, que fica na raiz do repositório.
-# Gerar: hugo --source consultoria   (ver localmente: hugo server --source consultoria)
-baseURL = "https://consultoria.filipecosta.eti.br/"
+# Gerar: hugo --source trabalho   (ver localmente: hugo server --source trabalho)
+baseURL = "https://trabalho.filipecosta.eti.br/"
 languageCode = "pt-BR"
 defaultContentLanguage = "pt-br"
 title = "Filipe Costa · consultoria"

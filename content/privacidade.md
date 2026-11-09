@@ -6,7 +6,7 @@ description: "Quais dados este site trata, para quê, e quais ferramentas de ter
 subtitulo: "Última atualização: 9 de novembro de 2026."
 ---
 
-Esta política vale para os dois endereços do site: o blog, em [filipecosta.eti.br](https://filipecosta.eti.br/), e a página de consultoria e treinamentos, em [consultoria.filipecosta.eti.br](https://consultoria.filipecosta.eti.br/). Os dois funcionam do mesmo jeito e usam as mesmas ferramentas.
+Esta política vale para os dois endereços do site: o blog, em [filipecosta.eti.br](https://filipecosta.eti.br/), e a página de consultoria e treinamentos, em [trabalho.filipecosta.eti.br](https://trabalho.filipecosta.eti.br/). Os dois funcionam do mesmo jeito e usam as mesmas ferramentas.
 
 Este site não coleta dados para publicidade, não usa ferramentas de análise de visitas e não tem cookies de rastreamento. O único dado pessoal que eu recebo é o que você escreve no formulário de contato, e ele serve só para responder a você.
 
@@ -18,7 +18,7 @@ O responsável pelo tratamento dos dados, nos termos da Lei Geral de Proteção 
 
 ## Formulário de contato
 
-O formulário fica em [consultoria.filipecosta.eti.br/contato](https://consultoria.filipecosta.eti.br/contato/). Quando você o envia, eu recebo os dados que você preencher: nome, e-mail, organização, tipo de organização, assunto e mensagem.
+O formulário fica em [trabalho.filipecosta.eti.br/contato](https://trabalho.filipecosta.eti.br/contato/). Quando você o envia, eu recebo os dados que você preencher: nome, e-mail, organização, tipo de organização, assunto e mensagem.
 
 - **Para quê:** responder ao seu contato e, se for o caso, conversar sobre uma proposta de trabalho. Os dados não são usados para enviar newsletter, propaganda ou qualquer outra coisa.
 - **Base legal:** o seu consentimento, dado ao marcar a caixa de concordância antes de enviar (art. 7º, I, da LGPD).
