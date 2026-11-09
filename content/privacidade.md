@@ -3,8 +3,10 @@ title: "Política de privacidade"
 destaque: "privacidade"
 pagina: true
 description: "Quais dados este site trata, para quê, e quais ferramentas de terceiros participam do seu funcionamento."
-subtitulo: "Última atualização: 5 de novembro de 2026."
+subtitulo: "Última atualização: 9 de novembro de 2026."
 ---
+
+Esta política vale para os dois endereços do site: o blog, em [filipecosta.eti.br](https://filipecosta.eti.br/), e a página de consultoria e treinamentos, em [consultoria.filipecosta.eti.br](https://consultoria.filipecosta.eti.br/). Os dois funcionam do mesmo jeito e usam as mesmas ferramentas.
 
 Este site não coleta dados para publicidade, não usa ferramentas de análise de visitas e não tem cookies de rastreamento. O único dado pessoal que eu recebo é o que você escreve no formulário de contato, e ele serve só para responder a você.
 
@@ -16,7 +18,7 @@ O responsável pelo tratamento dos dados, nos termos da Lei Geral de Proteção 
 
 ## Formulário de contato
 
-Quando você envia o formulário, eu recebo os dados que você preencher: nome, e-mail, organização, tipo de organização, assunto e mensagem.
+O formulário fica em [consultoria.filipecosta.eti.br/contato](https://consultoria.filipecosta.eti.br/contato/). Quando você o envia, eu recebo os dados que você preencher: nome, e-mail, organização, tipo de organização, assunto e mensagem.
 
 - **Para quê:** responder ao seu contato e, se for o caso, conversar sobre uma proposta de trabalho. Os dados não são usados para enviar newsletter, propaganda ou qualquer outra coisa.
 - **Base legal:** o seu consentimento, dado ao marcar a caixa de concordância antes de enviar (art. 7º, I, da LGPD).
@@ -25,7 +27,7 @@ Quando você envia o formulário, eu recebo os dados que você preencher: nome, 
 
 ## O que fica no seu navegador
 
-O site guarda uma única informação no seu próprio navegador: se você prefere o tema claro ou o escuro, quando usa o botão de sol e lua do cabeçalho. Essa preferência fica só no seu aparelho, não é enviada a mim nem a ninguém, e você pode apagá-la limpando os dados do site no navegador. Não há outros cookies ou armazenamentos.
+O site guarda uma única informação no seu próprio navegador: se você prefere o tema claro ou o escuro, quando usa o botão de sol e lua do cabeçalho. Como os dois endereços são sites separados para o navegador, a escolha é guardada em cada um deles. Essa preferência fica só no seu aparelho, não é enviada a mim nem a ninguém, e você pode apagá-la limpando os dados do site no navegador. Não há outros cookies ou armazenamentos.
 
 ## Ferramentas de terceiros
 

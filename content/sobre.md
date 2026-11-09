@@ -23,3 +23,5 @@ No trabalho, isso vira método:
 - **Quem faz o trabalho desenha o processo.** Consultoria não é entregar um manual pronto. É construir junto com a equipe.
 - **Autonomia acima de dependência.** Prefiro soluções abertas, que a organização consiga manter sem ficar presa a um fornecedor, inclusive a mim.
 - **Simples.** Se você explica o processo três vezes, documente. Se documentou e ainda precisa explicar, automatize.
+
+Os serviços de consultoria e os treinamentos estão em [consultoria.filipecosta.eti.br](https://consultoria.filipecosta.eti.br/).

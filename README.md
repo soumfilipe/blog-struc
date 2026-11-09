@@ -2,6 +2,13 @@
 
 Markdown + Hugo + Decap CMS + divulgação automática.
 
+São dois sites no mesmo repositório, com o mesmo tema:
+
+- **Blog** em `https://filipecosta.eti.br`: textos, Sobre e política de privacidade. É o site principal, na raiz do repositório.
+- **Consultoria** em `https://consultoria.filipecosta.eti.br`: serviços, treinamentos e o formulário de contato. Fica na pasta `consultoria/`.
+
+Os endereços antigos `/consultoria/`, `/treinamentos/` e `/contato/` do domínio principal redirecionam para o subdomínio (`static/_redirects`).
+
 Celular → `/admin` (Decap) → commit no GitHub → Action gera o site (Hugo), publica na Cloudflare e posta no Mastodon e Bluesky.
 
 Não há limite prático de deploys: o build roda no GitHub Actions e a Cloudflare só recebe os arquivos prontos.
@@ -10,21 +17,27 @@ Não há limite prático de deploys: o build roda no GitHub Actions e a Cloudfla
 
 ```
 content/posts/          posts em Markdown (um arquivo por post)
-content/consultoria/    serviços de consultoria (um arquivo por serviço)
-content/treinamentos/   cursos (um arquivo por curso; status: disponivel, em-atualizacao ou em-breve)
 content/sobre.md        página Sobre ("no que acredito")
-content/contato.md      página de contato com formulário (recebido pelo Worker)
+content/privacidade.md  política de privacidade (vale para os dois sites)
 data/trajetoria.yaml    linha do tempo da página Sobre
-data/experiencias.yaml  formações e projetos (página inicial e Sobre)
-static/admin/           painel do Decap CMS (config.yml)
-static/uploads/         imagens enviadas pelo painel
-themes/filipe-costa/    tema com a identidade visual (ver o README do tema)
-.github/workflows/      publicar.yml: gera o site, publica e divulga posts novos nas redes
-.github/scripts/        script da divulgação
-hugo.toml               configuração do site
-worker/index.js         Worker da Cloudflare: formulário de contato e login do Decap
-wrangler.toml           configuração do Worker (domínio, e-mail, arquivos estáticos)
+data/experiencias.yaml  formações e projetos (Sobre e página inicial da consultoria)
+static/admin/           painel do Decap CMS (config.yml), só no blog
+static/uploads/         imagens enviadas pelo painel (usadas pelos dois sites)
 static/_headers         cabeçalhos HTTP (cache das fontes)
+static/_redirects       redirecionamentos dos endereços antigos para o subdomínio
+hugo.toml               configuração do blog
+wrangler.toml           Worker do blog (domínio, e-mail, arquivos estáticos)
+
+consultoria/hugo.toml                configuração do site de consultoria
+consultoria/wrangler.toml            Worker do site de consultoria
+consultoria/content/servicos/        serviços de consultoria (um arquivo por serviço)
+consultoria/content/treinamentos/    cursos (um arquivo por curso; status: disponivel, em-atualizacao ou em-breve)
+consultoria/content/contato.md       página de contato com formulário (recebido pelo Worker)
+
+themes/filipe-costa/    tema com a identidade visual (ver o README do tema)
+worker/index.js         código dos dois Workers: formulário de contato e login do Decap
+.github/workflows/      publicar.yml: gera os dois sites, publica e divulga posts novos nas redes
+.github/scripts/        script da divulgação
 ```
 
 Os posts publicados antes da migração já têm `syndicated: true`, para não serem divulgados de novo, e `aliases` com os endereços antigos (WordPress `/blog/aaaa/mm/dd/slug/` e Quartz `/aaaa-mm-dd-slug/`), que redirecionam para o endereço novo `/posts/slug/`.
@@ -45,6 +58,8 @@ A ordem importa: o site antigo no Netlify continua no ar até o passo 5.
 7. **Netlify:** exporte as mensagens antigas do formulário (Forms → contato), apague-as lá e exclua o site do Netlify.
 8. Acesse `https://filipecosta.eti.br/admin/`, faça login e adicione à tela inicial do celular.
 
+**Subdomínio de consultoria:** o Worker `filipecosta-consultoria` e o endereço `consultoria.filipecosta.eti.br` são criados pelo próprio workflow no primeiro deploy (o token "Edit Cloudflare Workers" já permite). Ele usa o mesmo envio de e-mail do blog, sem configuração extra.
+
 Se o endereço `www.filipecosta.eti.br` for usado, crie na Cloudflare uma Redirect Rule de `www` para o domínio principal.
 
 **Privacidade:** não ligue o Web Analytics nem o Bot Fight Mode da Cloudflare. O primeiro coloca um script de outro domínio nas páginas, e o segundo pode criar cookies. Os dois mudariam a política de privacidade.
@@ -53,4 +68,4 @@ Se o endereço `www.filipecosta.eti.br` for usado, crie na Cloudflare uma Redire
 
 Crie o post no `/admin`, deixe "Rascunho" desligado e publique. A imagem de capa é opcional: sem ela, o site desenha uma capa com as cores da marca. A Action publica o site, posta nas redes e grava `syndicated: true` no arquivo para não repetir.
 
-Para ver o site localmente: `hugo server` (Hugo 0.128 ou mais novo).
+Para ver os sites localmente (Hugo 0.128 ou mais novo): `hugo server` para o blog e `hugo server --source consultoria` para o de consultoria.

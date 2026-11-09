@@ -1,12 +1,12 @@
 # Instruções para o Claude neste repositório
 
-Site pessoal de Filipe Costa (https://filipecosta.eti.br): Hugo com o tema `themes/filipe-costa`, painel Decap CMS em `/admin`, hospedagem, formulário e login do painel num Worker da Cloudflare (`worker/`, `wrangler.toml`), com build e deploy pelo GitHub Actions, divulgação de posts no Mastodon e no Bluesky por GitHub Actions. Branch principal: `v5`. Detalhes no `README.md`.
+Site pessoal de Filipe Costa, em dois endereços: o blog (https://filipecosta.eti.br, raiz do repositório) e o site de consultoria e treinamentos (https://consultoria.filipecosta.eti.br, pasta `consultoria/`, com o formulário de contato). Hugo com o tema `themes/filipe-costa`, painel Decap CMS em `/admin`, hospedagem, formulário e login do painel em dois Workers da Cloudflare com o mesmo código (`worker/`, `wrangler.toml` e `consultoria/wrangler.toml`), com build e deploy pelo GitHub Actions, divulgação de posts no Mastodon e no Bluesky por GitHub Actions. Branch principal: `v5`. Detalhes no `README.md`.
 
 ## Regra obrigatória: política de privacidade
 
 A cada mudança neste repositório ou no site, verifique se a política de privacidade (`content/privacidade.md`, publicada em `/privacidade/`) precisa ser alterada, e diga o resultado dessa verificação ao concluir o trabalho.
 
-A política lista só quem recebe dados de visitantes ou de quem usa o formulário. Hoje são a Cloudflare (hospedagem e envio do formulário por e-mail) e o Proton Mail (e-mail que recebe as mensagens). O site não tem cookies, análise de visitas nem conteúdo de terceiros, e as fontes são servidas pelo próprio site. A única coisa guardada no navegador é a preferência de tema (`localStorage`, chave `fc-theme`).
+A política vale para os dois endereços. Ela lista só quem recebe dados de visitantes ou de quem usa o formulário. Hoje são a Cloudflare (hospedagem e envio do formulário por e-mail) e o Proton Mail (e-mail que recebe as mensagens). O site não tem cookies, análise de visitas nem conteúdo de terceiros, e as fontes são servidas pelo próprio site. A única coisa guardada no navegador é a preferência de tema (`localStorage`, chave `fc-theme`).
 
 A política precisa mudar quando uma mudança:
 

@@ -26,14 +26,14 @@
   {{- end }}
 </section>
 
-{{- /* 2. Portas: consultoria, treinamentos, textos */}}
+{{- /* 2. Portas: as seções listadas em params.home.portas */}}
 {{- with $home.portas }}
 <section class="section container" aria-labelledby="portas">
   <div class="section__head">
     <h2 id="portas" class="h2">{{ $home.portasTitulo | default "Como posso ajudar" }}</h2>
   </div>
   {{- /* A porta marcada como destaque vira o card grande */}}
-  {{- $nomes := dict "posts" "textos" "consultoria" "serviços" "treinamentos" "cursos" }}
+  {{- $nomes := dict "posts" "textos" "consultoria" "serviços" "servicos" "serviços" "treinamentos" "cursos" }}
   <div class="{{ partial "mosaic-class.html" (dict "n" (len .) "hero" true) }}">
     {{- range $i, $porta := . }}
     {{- with site.GetPage $porta.pagina }}
@@ -44,14 +44,16 @@
 </section>
 {{- end }}
 
-{{- /* 3. Onde já atuei (data/experiencias.yaml) */}}
-{{- with site.Data.experiencias.items }}
+{{- /* 3. Onde já atuei (data/experiencias.yaml). Some com params.home.ocultarExperiencias = true */}}
+{{- with and (not $home.ocultarExperiencias) site.Data.experiencias.items }}
 <section class="section container" aria-labelledby="experiencias">
   <div class="section__head">
     <h2 id="experiencias" class="h2">Onde já <span class="hl">atuei</span></h2>
     {{- with site.GetPage "/sobre" }}
     <a class="btn" href="{{ .RelPermalink }}">trajetória completa {{ partial "icon.html" (dict "name" "seguir") }}</a>
-    {{- end }}
+    {{- else }}{{ with site.Params.sobreURL }}
+    <a class="btn" href="{{ . }}">trajetória completa {{ partial "icon.html" (dict "name" "seguir") }}</a>
+    {{- end }}{{ end }}
   </div>
   {{ partial "experiencias.html" . }}
 </section>

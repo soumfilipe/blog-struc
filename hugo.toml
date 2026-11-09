@@ -17,52 +17,41 @@ enableRobotsTXT = true
 
 [params]
   author = "Filipe Costa"
-  description = "Consultoria e formação em processos, design e agilidade."
+  description = "Textos sobre tecnologia, poder e o que é de todos."
   mainSections = ["posts"]
   archive = "/posts/"
   homePosts = 5
 
   # Rascunho de posicionamento: revisar antes de publicar
   [params.hero]
-    label = "consultoria e formação"
-    title = "Processos a serviço de quem"
-    highlight = "trabalha"
+    label = "blog"
+    title = "Tecnologia não é"
+    highlight = "neutra"
     end = "."
-    lead = "Consultoria e treinamentos em processos, design e agilidade para organizações que existem para servir às pessoas, e não ao lucro."
+    lead = "Textos sobre como as grandes empresas de tecnologia concentram poder, o trabalho escondido por trás das ferramentas que usamos e a privatização do que é de todos."
     [params.hero.primary]
-      label = "vamos conversar"
-      url = "/contato/"
+      label = "ler os textos"
+      url = "/posts/"
     [params.hero.secondary]
-      label = "conheça os treinamentos"
-      url = "/treinamentos/"
+      label = "quem escreve"
+      url = "/sobre/"
 
-  # Botão em pílula do cabeçalho
+  # Botão em pílula do cabeçalho: leva ao site de consultoria
   [params.cta]
-    label = "vamos conversar"
-    url = "/contato/"
+    label = "consultoria"
+    url = "https://consultoria.filipecosta.eti.br/"
 
-  # Seções da página inicial
+  # A página inicial do blog não mostra "Onde já atuei" (fica no site de consultoria)
   [params.home]
-    portasTitulo = "Como posso ajudar"
-    [[params.home.portas]]
-      pagina = "/consultoria"
-      icone = "processo"
-      destaque = true
-    [[params.home.portas]]
-      pagina = "/treinamentos"
-      icone = "agenda"
-    [[params.home.portas]]
-      pagina = "/posts"
-      rotulo = "textos"
-      icone = "terminal"
+    ocultarExperiencias = true
 
   # Faixa de chamada no fim das páginas
   [params.ctaBand]
-    label = ""
-    title = "Qual problema a sua equipe quer resolver?"
-    text = "Conte o contexto e eu digo, com franqueza, se e como posso ajudar."
-    button = "vamos conversar"
-    url = "/contato/"
+    label = "consultoria e formação"
+    title = "Processos a serviço de quem trabalha."
+    text = "Consultoria e treinamentos em processos, design e agilidade para o setor público, ONGs e movimentos sociais."
+    button = "conheça"
+    url = "https://consultoria.filipecosta.eti.br/"
 
   [[params.social]]
     name = "LinkedIn"
@@ -70,21 +59,13 @@ enableRobotsTXT = true
     url = "https://www.linkedin.com/in/filipecostaeti"
 
 [[menus.main]]
-  name = "consultoria"
-  pageRef = "/consultoria"
-  weight = 10
-[[menus.main]]
-  name = "treinamentos"
-  pageRef = "/treinamentos"
-  weight = 20
-[[menus.main]]
   name = "textos"
   pageRef = "/posts"
-  weight = 30
+  weight = 10
 [[menus.main]]
   name = "sobre"
   pageRef = "/sobre"
-  weight = 40
+  weight = 20
 
 [[menus.footer]]
   name = "política de privacidade"

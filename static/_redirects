@@ -1,0 +1,8 @@
+# Redirecionamentos lidos pela Cloudflare (só no domínio principal).
+# Consultoria, treinamentos e contato saíram do blog para o subdomínio.
+/consultoria                https://consultoria.filipecosta.eti.br/servicos/                301
+/consultoria/*              https://consultoria.filipecosta.eti.br/servicos/:splat          301
+/treinamentos               https://consultoria.filipecosta.eti.br/treinamentos/            301
+/treinamentos/*             https://consultoria.filipecosta.eti.br/treinamentos/:splat      301
+/contato                    https://consultoria.filipecosta.eti.br/contato/                 301
+/contato/*                  https://consultoria.filipecosta.eti.br/contato/:splat           301
