@@ -1,0 +1,27 @@
+name: Erro no site
+description: Página quebrada, link que não funciona, problema de layout ou de acessibilidade.
+labels: ["erro"]
+body:
+  - type: input
+    id: endereco
+    attributes:
+      label: Endereço da página
+      placeholder: https://filipecosta.eti.br/...
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: O que aconteceu
+      description: Descreva o problema. Se puder, inclua uma captura de tela.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que deveria acontecer
+  - type: input
+    id: ambiente
+    attributes:
+      label: Navegador e aparelho
+      placeholder: Firefox 140 no Android, Safari no iPhone, Chrome no Windows...

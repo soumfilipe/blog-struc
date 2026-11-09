@@ -1,0 +1,23 @@
+name: Sugestão de melhoria
+description: Ideia para o tema, os scripts ou o funcionamento do site.
+labels: ["sugestão"]
+body:
+  - type: textarea
+    id: ideia
+    attributes:
+      label: Qual é a ideia
+    validations:
+      required: true
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Por que ela ajuda
+      description: Que problema resolve, e para quem.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacidade
+    attributes:
+      label: Privacidade
+      options:
+        - label: A ideia não carrega recursos de outros domínios, não grava nada no navegador e não coleta dados de quem visita o site.
