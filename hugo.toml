@@ -36,27 +36,19 @@ enableRobotsTXT = true
       label = "quem escreve"
       url = "/sobre/"
 
-  # Botão em pílula do cabeçalho: leva ao site de consultoria
-  [params.cta]
-    label = "consultoria"
-    url = "https://trabalho.filipecosta.eti.br/"
-
-  # A página inicial do blog não mostra "Onde já atuei" (fica no site de consultoria)
+  # A página inicial do blog não mostra "Onde já atuei"
   [params.home]
     ocultarExperiencias = true
-
-  # Faixa de chamada no fim das páginas
-  [params.ctaBand]
-    label = "consultoria e formação"
-    title = "Processos a serviço de quem trabalha."
-    text = "Consultoria e treinamentos em processos, design e agilidade para o setor público, ONGs e movimentos sociais."
-    button = "conheça"
-    url = "https://trabalho.filipecosta.eti.br/"
 
   [[params.social]]
     name = "LinkedIn"
     icon = "link"
     url = "https://www.linkedin.com/in/filipecostaeti"
+
+  [[params.social]]
+    name = "Mastodon"
+    icon = "conversa"
+    url = "https://organica.social/@filipecostaetibr"
 
 [[menus.main]]
   name = "textos"

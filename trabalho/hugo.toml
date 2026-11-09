@@ -67,6 +67,11 @@ disableKinds = ["rss", "taxonomy", "term"]
     icon = "link"
     url = "https://www.linkedin.com/in/filipecostaeti"
 
+  [[params.social]]
+    name = "Mastodon"
+    icon = "conversa"
+    url = "https://organica.social/@filipecostaetibr"
+
 [[menus.main]]
   name = "serviços"
   pageRef = "/servicos"
