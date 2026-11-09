@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: soumfilipe/blog-struc
-  branch: v5
+  branch: principal
   # Login pelo Worker da Cloudflare (worker/index.js), no próprio site
   base_url: https://filipecosta.eti.br
   auth_endpoint: api/auth

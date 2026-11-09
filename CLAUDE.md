@@ -1,6 +1,6 @@
 # Instruções para o Claude neste repositório
 
-Site pessoal de Filipe Costa, em dois endereços: o blog (https://filipecosta.eti.br, raiz do repositório) e o site de consultoria e treinamentos (https://trabalho.filipecosta.eti.br, pasta `trabalho/`, com o formulário de contato). Hugo com o tema `themes/filipe-costa`, painel Decap CMS em `/admin`, hospedagem, formulário e login do painel em dois Workers da Cloudflare com o mesmo código (`worker/`, `wrangler.toml` e `trabalho/wrangler.toml`), com build e deploy pelo GitHub Actions, divulgação de posts no Mastodon e no Bluesky por GitHub Actions. Branch principal: `v5`. Detalhes no `README.md`.
+Site pessoal de Filipe Costa, em dois endereços: o blog (https://filipecosta.eti.br, raiz do repositório) e o site de consultoria e treinamentos (https://trabalho.filipecosta.eti.br, pasta `trabalho/`, com o formulário de contato). Hugo com o tema `themes/filipe-costa`, painel Decap CMS em `/admin`, hospedagem, formulário e login do painel em dois Workers da Cloudflare com o mesmo código (`worker/`, `wrangler.toml` e `trabalho/wrangler.toml`), com build e deploy pelo GitHub Actions, divulgação de posts no Mastodon e no Bluesky por GitHub Actions. Branch principal: `principal`. Detalhes no `README.md`.
 
 ## Regra obrigatória: política de privacidade
 
