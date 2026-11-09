@@ -64,12 +64,12 @@ disableKinds = ["rss", "taxonomy", "term"]
 
   [[params.social]]
     name = "LinkedIn"
-    icon = "link"
+    icon = "linkedin"
     url = "https://www.linkedin.com/in/filipecostaeti"
 
   [[params.social]]
     name = "Mastodon"
-    icon = "conversa"
+    icon = "mastodon"
     url = "https://organica.social/@filipecostaetibr"
 
 [[menus.main]]

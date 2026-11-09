@@ -81,7 +81,7 @@ Posts, serviços, cursos e as seções da página inicial aparecem em mosaicos d
 {{< duotone src="foto.jpg" alt="Descrição da foto" legenda="Foto: arquivo pessoal" >}}
 ```
 
-Ícones disponíveis (kit da marca: grade 24px, traço 2px): `codigo`, `terminal`, `design`, `processo`, `ok`, `seguir`, `voltar`, `menu`, `busca`, `email`, `perfil`, `agenda`, `link`, `rapido`, `baixar`, `ajustes`, `novo`, `sol`, `lua`, `rss`.
+Ícones disponíveis (kit da marca: grade 24px, traço 2px): `codigo`, `terminal`, `design`, `processo`, `ok`, `seguir`, `voltar`, `menu`, `busca`, `email`, `perfil`, `agenda`, `link`, `rapido`, `baixar`, `ajustes`, `novo`, `sol`, `lua`, `rss`, `linkedin`, `mastodon`.
 
 ## Estrutura do CSS
 
