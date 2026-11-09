@@ -1,0 +1,111 @@
+# Site de consultoria e treinamentos: https://trabalho.filipecosta.eti.br
+# Usa o mesmo tema, as mesmas imagens enviadas pelo painel (static/uploads) e os
+# mesmos dados (data/) do blog, que fica na raiz do repositório.
+# Gerar: hugo --source trabalho   (ver localmente: hugo server --source trabalho)
+baseURL = "https://trabalho.filipecosta.eti.br/"
+languageCode = "pt-BR"
+defaultContentLanguage = "pt-br"
+title = "Filipe Costa · consultoria"
+theme = "filipe-costa"
+themesDir = "../themes"
+timeZone = "America/Sao_Paulo"
+removePathAccents = true
+enableRobotsTXT = true
+# Este site não tem posts: sem RSS nem páginas de categorias.
+disableKinds = ["rss", "taxonomy", "term"]
+
+[params]
+  author = "Filipe Costa"
+  description = "Consultoria e formação em processos, design e agilidade."
+  # Sem posts neste site: a seção "Últimos textos" da página inicial não aparece.
+  mainSections = ["posts"]
+  # O blog, a página Sobre e a política de privacidade ficam no domínio principal.
+  sobreURL = "https://filipecosta.eti.br/sobre/"
+  privacidadeURL = "https://filipecosta.eti.br/privacidade/"
+
+  # Rascunho de posicionamento: revisar antes de publicar
+  [params.hero]
+    label = "consultoria e formação"
+    title = "Processos a serviço de quem"
+    highlight = "trabalha"
+    end = "."
+    lead = "Consultoria e treinamentos em processos, design e agilidade para organizações que existem para servir às pessoas, e não ao lucro."
+    [params.hero.primary]
+      label = "vamos conversar"
+      url = "/contato/"
+    [params.hero.secondary]
+      label = "conheça os treinamentos"
+      url = "/treinamentos/"
+
+  # Botão em pílula do cabeçalho
+  [params.cta]
+    label = "vamos conversar"
+    url = "/contato/"
+
+  # Seções da página inicial
+  [params.home]
+    portasTitulo = "Como posso ajudar"
+    [[params.home.portas]]
+      pagina = "/servicos"
+      rotulo = "consultoria"
+      icone = "processo"
+      destaque = true
+    [[params.home.portas]]
+      pagina = "/treinamentos"
+      icone = "agenda"
+
+  # Faixa de chamada no fim das páginas
+  [params.ctaBand]
+    label = ""
+    title = "Qual problema a sua equipe quer resolver?"
+    text = "Conte o contexto e eu digo, com franqueza, se e como posso ajudar."
+    button = "vamos conversar"
+    url = "/contato/"
+
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "link"
+    url = "https://www.linkedin.com/in/filipecostaeti"
+
+[[menus.main]]
+  name = "serviços"
+  pageRef = "/servicos"
+  weight = 10
+[[menus.main]]
+  name = "treinamentos"
+  pageRef = "/treinamentos"
+  weight = 20
+[[menus.main]]
+  name = "textos"
+  url = "https://filipecosta.eti.br/posts/"
+  weight = 30
+[[menus.main]]
+  name = "sobre"
+  url = "https://filipecosta.eti.br/sobre/"
+  weight = 40
+
+[[menus.footer]]
+  name = "política de privacidade"
+  url = "https://filipecosta.eti.br/privacidade/"
+  weight = 10
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+# Pastas compartilhadas com o blog (na raiz do repositório). O painel /admin
+# continua só no blog, por isso static/admin e static/_redirects ficam de fora.
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "../data"
+    target = "data"
+  [[module.mounts]]
+    source = "../static"
+    target = "static"
+    excludeFiles = ["admin/**", "_redirects"]
+  [[module.mounts]]
+    source = "../static/uploads"
+    target = "assets/uploads"

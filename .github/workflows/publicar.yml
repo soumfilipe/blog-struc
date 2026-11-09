@@ -1,7 +1,8 @@
 name: Publicar
 
-# A cada mudança na branch principal: gera o site com o Hugo, publica na
-# Cloudflare e divulga os posts novos no Mastodon e no Bluesky.
+# A cada mudança na branch principal: gera os dois sites com o Hugo (o blog, na
+# raiz, e o de consultoria, em trabalho/), publica na Cloudflare e divulga os
+# posts novos no Mastodon e no Bluesky.
 on:
   push:
     branches: [v5]   # branch principal deste repositório
@@ -39,16 +40,27 @@ jobs:
             | tar -xz -C "$RUNNER_TEMP/hugo" hugo
           echo "$RUNNER_TEMP/hugo" >> "$GITHUB_PATH"
 
-      - name: Gerar o site
+      - name: Gerar o blog
         run: hugo --gc --minify
 
-      - name: Publicar na Cloudflare
+      - name: Gerar o site de consultoria
+        run: hugo --gc --minify --source trabalho
+
+      - name: Publicar o blog na Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: "4.158.0"
           command: deploy
+
+      - name: Publicar o site de consultoria na Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4.158.0"
+          command: deploy --config trabalho/wrangler.toml
 
       - uses: actions/setup-node@v4
         with:

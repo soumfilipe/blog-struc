@@ -47,6 +47,9 @@ hugo server --themesDir ../..
 | `[params.hero]` | `label`, `title`, `highlight` (palavra em roxo), `end` e `lead` do hero |
 | `[params.cta]` | `label` e `url` do botão em pílula do cabeçalho |
 | `[[params.social]]` | Links do rodapé: `name`, `url` e `icon` (opcional) |
+| `[params.home]` | `portasTitulo` e `[[portas]]` (`pagina`, `rotulo`, `icone`, `destaque`) da página inicial; `ocultarExperiencias = true` tira a seção "Onde já atuei" |
+| `sobreURL` | Link "trajetória completa" quando o site não tem a página `/sobre` |
+| `privacidadeURL` | Link da política no formulário de contato quando o site não tem a página `/privacidade` |
 
 ## Front matter
 

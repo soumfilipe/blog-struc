@@ -1,4 +1,5 @@
-// Worker do site na Cloudflare.
+// Worker dos dois sites na Cloudflare: o blog (filipecosta.eti.br, wrangler.toml da
+// raiz) e o de consultoria (trabalho.filipecosta.eti.br, trabalho/wrangler.toml).
 // As páginas estáticas (pasta public/, gerada pelo Hugo) são servidas direto pela
 // Cloudflare. Este código só roda nos endereços /api/*:
 //   POST /api/contato         formulário de contato → e-mail para a caixa do Proton
@@ -14,8 +15,9 @@ export default {
     const url = new URL(request.url);
     try {
       if (url.pathname === "/api/contato") return await contato(request, env, url);
-      if (url.pathname === "/api/auth") return authStart(env, url);
-      if (url.pathname === "/api/auth/callback") return await authCallback(request, env, url);
+      // Login do painel: só no Worker que tem as credenciais do GitHub (o do blog).
+      if (env.GITHUB_CLIENT_ID && url.pathname === "/api/auth") return authStart(env, url);
+      if (env.GITHUB_CLIENT_ID && url.pathname === "/api/auth/callback") return await authCallback(request, env, url);
     } catch (e) {
       console.error(e);
       if (url.pathname === "/api/contato") return redirect(url, ERRO);
@@ -64,7 +66,7 @@ async function contato(request, env, url) {
     to: env.FORM_TO,
     replyTo: dados.email,
     subject: assunto,
-    text: texto + "\n\n— Enviado pelo formulário de filipecosta.eti.br/contato/",
+    text: texto + `\n\n— Enviado pelo formulário de ${url.host}/contato/`,
   });
   await env.EMAIL.send(new EmailMessage(env.FORM_FROM, env.FORM_TO, mime));
   return redirect(url, OBRIGADO);
